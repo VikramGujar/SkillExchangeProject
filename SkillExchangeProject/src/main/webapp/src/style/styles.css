@@ -1,5 +1,9 @@
 
 /*----------------------------------- Variable Declaration--------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 :root{
     --btn-color:#FFC200;
     --bg-color:#F9FAFC;
@@ -18,7 +22,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background:var(--txt-colorW);
+    background:var(--bg-color);
     color:var(--txt-color);
 }
 
@@ -59,10 +63,39 @@ header {
     font-weight: bold;
 }
 
+/*-------------------------------------- Navbar -------------------------------*/
+.nav{
+	display: flex;
+}
+.navbar{
+	list-style: none;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.navbar li{
+	color: var(--txt-color);
+    padding: 0.8rem 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar li a:hover{
+	transition: all 0.9s;
+	scale:1.2;
+	cursor: pointer;
+	
+}
+
+
+/*--------------------------------Login Button----------------------------------*/
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin-top:10px;
 }
 
 .nav-links li a {
@@ -118,10 +151,69 @@ header {
    width: 50rem;
    height: 41rem;;
 }
-/*----------------------------------- Footer Section Style --------------------------------------*/
+/*-----------------------------About Section Style------------------------------------*/
+
+#about {
+    background-color: var(--bg-color);
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: var(--txt-color);
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--txt-color);
+    text-align: center;
+}
+
+.our-mission, .who-are-we, .why-we-started {
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--txt-color);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--txt-color);
+}
+
+.our-mission p, .who-are-we p, .why-we-started p {
+    font-size: 18px;
+}
+
+.our-mission p, .who-are-we p, .why-we-started p {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--btn-color);
+}
+
+#about .section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--txt-color);
+}
+
+
+
+/*------------------- Footer Section Style --------------------------------*/
 footer {
-    background: var(--txt-color);
-    color: var(--txt-colorW);
+    background: var(--txt-colorW);
+    color: var(--bg-color);
     text-align: center;
     padding: 20px 10px;
 }
