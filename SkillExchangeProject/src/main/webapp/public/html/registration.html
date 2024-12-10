@@ -33,6 +33,14 @@
             max-width: 400px;
             text-align: center;
         }
+        
+        .error-message{
+        position: relative;
+        top:-55px;
+        left:362px;
+        font-size: 12px;
+        color: red;
+        }
 
         h2 {
             color: var(--txt-color);
@@ -125,7 +133,7 @@
 
     <div class="register-container">
         <h2>Register</h2>
-        <form id="register-form" action="#" method="POST">
+        <form id="register-form" action="reg" method="POST">
             <!-- First Name input -->
             <div class="input-group">
                 <label for="first-name">First Name</label>
@@ -252,19 +260,7 @@
         });
 
         confirmPasswordField.addEventListener('input', validatePasswords);
-        
 
-        registerForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            //calling validatePasswords and validNames functions
-            if (passwordField.value && validatePasswords() && validNames()) {
-                // Only after all condition true you can submitt the form
-            	alert('Registration successful!');
-                
-            } else {
-                alert('Please fix the errors before submitting.');
-            }
-        });
     </script>
 
 </body>
