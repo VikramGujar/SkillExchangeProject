@@ -22,7 +22,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background:var(--bg-color);
+    background:var(--txt-colorW);
     color:var(--txt-color);
 }
 
@@ -168,7 +168,35 @@ header {
     text-align: center;
 }
 
-.our-mission, .who-are-we, .why-we-started {
+.about-part-one{
+	display: flex;
+	gap:40px;
+	align-items: center;
+	margin-left: 50px;
+}
+
+.right-info{
+	width: 45%
+}
+
+.left-image{
+	width:45%;
+}
+.about-part-two{
+	display: flex;
+	gap:40px;
+	align-items: center;
+	margin-left: 50px;
+}
+
+.right-image{
+	width: 45%
+}
+
+.left-info{
+	width:45%;
+}
+.our-mission, .who-are-we, .why-we-started, .our-vision {
     margin-bottom: 30px;
 }
 
@@ -185,11 +213,11 @@ p {
     color: var(--txt-color);
 }
 
-.our-mission p, .who-are-we p, .why-we-started p {
+.our-mission p, .who-are-we p, .why-we-started p, .our-vision p {
     font-size: 18px;
 }
 
-.our-mission p, .who-are-we p, .why-we-started p {
+.our-mission p, .who-are-we p, .why-we-started p, .our-vision p {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
