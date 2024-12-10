@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 
 import javabean.UserDataBean;
 
-public class AddUserDataInDBDAO {
+public class RegistrationDAO {
 	
 	int k=0;
 	

@@ -3,7 +3,7 @@ package userinput;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import databaseoperation.AddUserDataInDBDAO;
+import databaseoperation.RegistrationDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,16 +13,16 @@ import javabean.UserDataBean;
 
 @SuppressWarnings("serial")
 
-@WebServlet("/reg")
+@WebServlet("/public/html/reg")
 public class RegisterServlet extends HttpServlet {
 
 	UserDataBean ub=null;
-	AddUserDataInDBDAO au=null;
+	RegistrationDAO au=null;
 	@Override
 	public void init()
 	{
 		ub= new UserDataBean();
-		au= new AddUserDataInDBDAO();
+		au= new RegistrationDAO();
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException
@@ -33,17 +33,17 @@ public class RegisterServlet extends HttpServlet {
 		ub.setPass(req.getParameter("password"));
 		
 		int result=au.addData(ub);
-		
+		req.setAttribute("username",ub.getFname());
 		if(result>0)
 		{
-			
+			req.getRequestDispatcher("welcomePage.jsp").forward(req, res);
 		}
 		else
 		{
 			res.setContentType("text/html");
 			
 			PrintWriter pw=res.getWriter();
-			pw.print("Something is wrong try again");
+			pw.print("<div class='error-message'>[ Username taken! Try something more unique! ]</div>");
 			req.getRequestDispatcher("registration.html").include(req, res);
 		}
 	}
