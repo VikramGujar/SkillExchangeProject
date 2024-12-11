@@ -12,8 +12,7 @@ public class LoginDAO {
 	
 	public UserDataBean checkLogin(String usename,String password)
 	{
-		
-		
+
 		try
 		{
 			Connection con=DatabaseConnection.getConnection();

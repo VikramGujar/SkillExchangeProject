@@ -1,3 +1,4 @@
+<%@page import="javabean.UserDataBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,8 +9,8 @@
 </head>
 <body>
 	<%
-		String username=(String)request.getAttribute("username");
+		UserDataBean ub=(UserDataBean)application.getAttribute("ubean");
 	%>
-	<h1>Welcome, <%=username %>! SkillExchange is your new playground for growth!</h1>
+	<h1>Welcome, <%=ub.getFname() %>! SkillExchange is your new playground for growth!</h1>
 </body>
 </html>
