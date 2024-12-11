@@ -12,7 +12,8 @@ public class RegistrationDAO {
 	public int addData(UserDataBean ub)
 	{
 		Connection con=DatabaseConnection.getConnection();
-		try(con)
+		
+		try
 		{
 			PreparedStatement ps=con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?)");
 			
