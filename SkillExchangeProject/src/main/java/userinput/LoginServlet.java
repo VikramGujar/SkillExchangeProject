@@ -1,11 +1,12 @@
 package userinput;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import databaseoperation.LoginDAO;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -34,16 +35,23 @@ public class LoginServlet extends HttpServlet{
 		
 		if(!(ub==null))
 		{
-			req.setAttribute("username", ub.getFname());
+			//Accessing ServletContext object reference
+			ServletContext sct = req.getServletContext();
+			sct.setAttribute("ubean", ub);
+			
+			//Creating Cookie
+			Cookie ck=new Cookie("firstName", ub.getFname());
+			
+			//Adding Cookie object to response
+			res.addCookie(ck);
+			
+			//Forwarding request and response
 			req.getRequestDispatcher("welcomePage.jsp").forward(req, res);
 		}
 		else
 		{
-			res.setContentType("text/html");
-			PrintWriter pw=res.getWriter();
-			pw.print("<div class='error-message'>Oops! Check your username or password.</div>");
-			
-			req.getRequestDispatcher("login.html").include(req, res);
+			req.setAttribute("msg","<div class='login-fail'>Oops! Check your username or password.</div>");
+			req.getRequestDispatcher("userlogin.jsp").forward(req, res);
 		}
 	}
 	
