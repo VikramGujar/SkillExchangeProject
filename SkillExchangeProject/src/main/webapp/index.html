@@ -208,11 +208,34 @@
 	
 	
     <!----------------------------------- Footer Section --------------------------------------------->
-    <footer>
+    <footer class="footer">
+    <div class="footer-container">
         <div class="footer-content">
-            <p>&copy; 2024 Skill Exchange. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#review">Review</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Skill Exchange. All rights reserved.</p>
+        </div>
+        
+        <div class="thank-you-message">
+        	<p>Thank you for visiting! We appreciate your support.</p>
+    	</div>
+    </div>
+</footer>
+
+<!----------------JavaScript Code -------------------->
+<script>
+// For getting year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 
 </html>

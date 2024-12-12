@@ -309,17 +309,97 @@ h2 {
 
 
 /*------------------- Footer Section Style --------------------------------*/
+
 footer {
-    background: var(--txt-colorW);
-    color: var(--bg-color);
-    text-align: center;
-    padding: 20px 10px;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
 
-/*--------------------------------------------------------------------------------------------------------------------*/
+.footer-nav ul li {
+    margin: 0;
+}
+
+.footer-nav ul li a {
+    color: var(--txt-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: var(--btn-color);
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: var(--txt-color);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/*------------------- Thank You Message Styling-------------------------------- */
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    font-size: 20px;
+    color: var(--txt-color);
+    animation: animation 1.5s ease-in-out forwards;
+}
+@keyframes animation {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(30px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-15px);
+        opacity: 0.9;
+    }
+    70% {
+        transform: translateY(5px);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.thank-you-message p {
+    margin: 0;
+
+    font-weight: bold;
+    color: var(--btn-color);
+    font-size: 24px;
+}
