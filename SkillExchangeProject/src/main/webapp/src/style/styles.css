@@ -4,13 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 
-:root{
-    --btn-color:#FFC200;
-    --bg-color:#F9FAFC;
-    --txt-color:#222;
+:root {
+    --btn-color: #FFC200;
+    --bg-color: #F9FAFC;
+    --txt-color: #333;
     --txt-colorW:#fff; 
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
-
 
 /*----------------------------------- Common Style for all --------------------------------------*/
 *{
@@ -155,88 +155,113 @@ header {
 
 #about {
     background-color: var(--bg-color);
-    padding: 40px;
-    font-family: Arial, sans-serif;
+    padding: 80px 40px;
+    font-family: 'Arial', sans-serif;
     color: var(--txt-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
 .section-heading {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: var(--txt-color);
     text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
-.about-part-one{
-	display: flex;
-	gap:40px;
-	align-items: center;
-	margin-left: 50px;
+.about-part-one,
+.about-part-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
-.right-info{
-	width: 45%
+.right-info,
+.left-info {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
-.left-image{
-	width:45%;
-}
-.about-part-two{
-	display: flex;
-	gap:40px;
-	align-items: center;
-	margin-left: 50px;
-}
-
-.right-image{
-	width: 45%
+.left-image,
+.right-image {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.left-info{
-	width:45%;
+.left-image img {
+	width: 90%;
+    height: 90%;
 }
-.our-mission, .who-are-we, .why-we-started, .our-vision {
+
+.right-image img{
+	width: 90%;
+    height: 90%;
+}
+
+
+.our-mission, 
+.who-are-we, 
+.why-we-started, 
+.our-vision {
     margin-bottom: 30px;
+    padding: 25px;
+    background-color: var(--txt-colorW);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
 
 h3 {
     font-size: 24px;
-    font-weight: bold;
-    color: var(--txt-color);
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--btn-color);
+    margin-bottom: 15px;
+    text-transform: capitalize;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--txt-color);
-}
-
-.our-mission p, .who-are-we p, .why-we-started p, .our-vision p {
     font-size: 18px;
-}
-
-.our-mission p, .who-are-we p, .why-we-started p, .our-vision p {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--btn-color);
-}
-
-#about .section-heading {
-    font-size: 36px;
-    font-weight: 700;
+    line-height: 1.7;
     color: var(--txt-color);
+    font-weight: 300;
 }
 
+p:hover {
+    color: var(--btn-color);
+    cursor: pointer;
+}
 
+.our-mission p,
+.who-are-we p,
+.why-we-started p,
+.our-vision p {
+    background-color: var(--txt-colorW);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.our-mission p:hover,
+.who-are-we p:hover,
+.why-we-started p:hover,
+.our-vision p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
 
 /*------------------------------------Review section Style----------------------*/
 
