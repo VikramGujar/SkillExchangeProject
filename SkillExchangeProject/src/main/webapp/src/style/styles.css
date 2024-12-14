@@ -8,7 +8,7 @@ html {
     --btn-color: #FFC200;
     --bg-color: #F9FAFC;
     --txt-color: #333;
-    --txt-colorW:#fff; 
+    --txt-color-white:#fff; 
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -22,7 +22,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background:var(--txt-colorW);
+    background:var(--txt-color-white);
     color:var(--txt-color);
 }
 
@@ -159,9 +159,7 @@ header {
     font-family: 'Arial', sans-serif;
     color: var(--txt-color);
     border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .section-heading {
@@ -205,6 +203,7 @@ header {
 .left-image img {
 	width: 90%;
     height: 90%;
+    
 }
 
 .right-image img{
@@ -219,9 +218,9 @@ header {
 .our-vision {
     margin-bottom: 30px;
     padding: 25px;
-    background-color: var(--txt-colorW);
+    background-color: var(--txt-color-white);
     border-radius: 10px;
-    box-shadow: 0 4px 10px var(--shadow-color);
+    
 }
 
 h3 {
@@ -239,7 +238,7 @@ p {
     font-weight: 300;
 }
 
-p:hover {
+#about p:hover {
     color: var(--btn-color);
     cursor: pointer;
 }
@@ -248,10 +247,9 @@ p:hover {
 .who-are-we p,
 .why-we-started p,
 .our-vision p {
-    background-color: var(--txt-colorW);
+    background-color: var(--txt-color-white);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px var(--shadow-color);
     transition: all 0.3s ease;
 }
 
@@ -287,7 +285,7 @@ h2 {
 }
 
 .review {
-    background-color: var(--txt-colorW);
+    background-color: var(--txt-color-white);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -332,99 +330,225 @@ h2 {
     color: #555;
 }
 
+/*------------------------Contact Section Style------------------------------*/
+
+.contact-section {
+    background-color: var(--bg-color);
+    padding: 50px 0;
+    
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info-container {
+    flex: 1;
+    min-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.contact-info-container h3 {
+    color: var(--txt-color);
+    font-size: 2.5rem;  
+    margin-bottom: 15px;
+}
+
+.contact-info-container p {
+    color: var(--txt-color);
+    font-size: 1.2rem; 
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    font-size: 1.2rem;  
+    color: var(--txt-color);
+}
+
+.contact-item a {
+    color: var(--btn-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #e5a600;
+}
+
+
+.contact-form-container {
+    flex: 1;
+    min-width: 45%;
+    padding-right: 30px;
+}
+
+.contact-section h2 {
+    color: var(--txt-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: var(--txt-color);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-form label {
+    text-align: left;
+    color: var(--txt-color);
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: var(--txt-color);
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form .btn {
+    padding: 12px 20px;
+    background-color: var(--btn-color);
+    color: var(--txt-color-white);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #e5a600;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--btn-color);
+    box-shadow: 0 0 5px rgba(255, 194, 0, 0.5);
+}
+
 
 /*------------------- Footer Section Style --------------------------------*/
 
 footer {
-    background-color: var(--bg-color);
+    background-color: #e8e8e8;
     color: var(--txt-color);
     padding: 20px 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    
 }
 
 .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-.footer-content {
-    text-align: center;
-    margin-bottom: 20px;
+.footer-logo img {
+    width: 150px;
+    height: auto;
 }
 
-.footer-nav ul {
+.footer-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-.footer-nav ul li {
-    margin: 0;
+.footer-links ul li {
+    display: inline-block;
 }
 
-.footer-nav ul li a {
-    color: var(--txt-color);
+.footer-links ul li a {
     text-decoration: none;
+    color: var(--txt-color);
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-.footer-nav ul li a:hover {
+.footer-links ul li a:hover {
     color: var(--btn-color);
 }
 
-.footer-bottom {
-    font-size: 14px;
-    color: var(--txt-color);
-}
-
-.footer-bottom p {
+.footer-social ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    display: flex;
+    gap: 15px;
 }
 
-/*------------------- Thank You Message Styling-------------------------------- */
+.footer-social ul li {
+    display: inline-block;
+}
 
-.thank-you-message {
-    text-align: center;
-    margin-top: 20px;
-    opacity: 0;
+.footer-social ul li a {
+    color: var(--txt-color);
     font-size: 20px;
-    color: var(--txt-color);
-    animation: animation 1.5s ease-in-out forwards;
-}
-@keyframes animation {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    30% {
-        transform: translateY(30px);
-        opacity: 0.4;
-    }
-    50% {
-        transform: translateY(-15px);
-        opacity: 0.9;
-    }
-    70% {
-        transform: translateY(5px);
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.thank-you-message p {
-    margin: 0;
-
-    font-weight: bold;
+.footer-social ul li a:hover {
     color: var(--btn-color);
-    font-size: 24px;
 }
+
+.footer-social ul li a i {
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
