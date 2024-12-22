@@ -8,10 +8,11 @@ import javabean.UserDataBean;
 
 public class LoginDAO {
 	
-	UserDataBean ub=null;
+	
 	
 	public UserDataBean checkLogin(String usename,String password)
 	{
+		UserDataBean ub=null;
 
 		try
 		{
