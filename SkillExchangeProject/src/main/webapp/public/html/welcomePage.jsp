@@ -17,52 +17,51 @@
     --bg-color: #F9FAFC;
     --txt-color: #222;
     --white-color: #fff;
-	}
+}
 
-	body {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-	}
+}
 
-	/* Header Section Styling */
-
-	header {
+/* Header Section Styling */
+header {
     background: linear-gradient(to right, #ffe387, #ffd034);
     color: var(--txt-color);
     padding: 10px 20px;
     height: 10vh;
-	}
+}
 
-	.logo img {
+.logo img {
     height: 40px;
-	}
+}
 
-	.header-icons i {
+.header-icons i {
     font-size: 1.5rem;
     color: var(--txt-color);
-	}
+    transition: all 500ms;
+}
 
-	.header-icons i:hover {
+.header-icons i:hover {
     color: var(--bg-color);
-	}
+}
 
-	.container {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-	}
+}
 
-	/* Hero Section Styling */
-
-	:root {
+/* Hero Section Styling */
+:root {
     --btn-color: #FFC200;
     --btn-hover-color: #ff9900;
     --white-color: #ffffff;
     --txt-color: #222222;
-	}
+}
 
-	.hero {
+.hero {
     background-image: url('../assets/image/hero-bg-2.jpg');
     background-size: cover;
     background-position: unset;
@@ -72,15 +71,15 @@
     position: relative;
     display: flex;
     overflow: hidden;
-	}
+}
 
-	.hero .container {
+.hero .container {
     z-index: 2;
     display: flex;
     flex-direction: column;
-	}
+}
 
-	.slogun {
+.slogun {
     font-size: 3rem;
     font-weight: bold;
     position: relative;
@@ -88,51 +87,55 @@
     right: 400px;
     width: 50%;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-	}
+}
 
-	.hero-paragraph {
+.hero-paragraph {
     font-size: 1.25rem;
     position: relative;
     bottom: 50px;
     right: 400px;
     width: 50%;
+    
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
-	}
+}
 
-	.hero-buttons {
+.hero-buttons {
     position: relative;
     right: 400px;
     width: 50%;
-	}
+}
 
-	.hero .btn {
+.hero .btn {
     font-size: 1.25rem;
     padding: 15px 40px;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
-	}
+}
 
-	.hero .btn-primary {
+.hero .btn-primary {
     background-color: var(--btn-color);
     color: var(--white-color);
     border: none;
-	}
+    transition: all 500ms;
+}
 
-	.hero .btn-primary:hover {
+.hero .btn-primary:hover {
     background-color: var(--btn-hover-color);
-	}
+}
 
-	.hero .btn-outline-light {
+.hero .btn-outline-light {
     background-color: transparent;
     border-color: var(--white-color);
     color: var(--white-color);
-	}
+    transition: all 500ms;
+}
 
-	.hero .btn-outline-light:hover {
+.hero .btn-outline-light:hover {
     background-color: var(--white-color);
     color: var(--txt-color);
-	}
+}
+
 
     </style>
     
