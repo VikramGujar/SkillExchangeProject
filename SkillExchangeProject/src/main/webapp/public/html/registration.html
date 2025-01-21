@@ -1,181 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registration</title>
-    <style>
-        :root {
-            --btn-color: #FFC200;
-            --bg-color: #F9FAFC;
-            --txt-color: #222;
-            --txt-colorW: #fff;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .register-container {
-            background-color: var(--txt-colorW);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-        
-        .error-message{
-        position: relative;
-        top:-55px;
-        left:362px;
-        font-size: 12px;
-        color: red;
-        }
-
-        h2 {
-            color: var(--txt-color);
-            margin-bottom: 1rem;
-        }
-
-        .input-group {
-            margin-bottom: 1.2rem;
-            text-align: left;
-        }
-
-        .input-group label {
-            font-size: 0.9rem;
-            color: var(--txt-color);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-            color: var(--txt-color);
-            background-color: #fff;
-        }
-
-        .input-group input:focus {
-            outline: none;
-            border-color: var(--btn-color);
-        }
-
-        .password-strength {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 0.5rem;
-            text-align: left;
-        }
-
-        .password-error {
-            color: red;
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        .btn-register {
-            background-color: var(--btn-color);
-            color: var(--txt-colorW);
-            padding: 1rem;
-            font-size: 1.1rem;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn-register:hover {
-            background-color: #ffb300;
-        }
-
-        .login-redirect {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .login-redirect a {
-            color: var(--btn-color);
-            text-decoration: none;
-        }
-
-        .login-redirect a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .register-container {
-                padding: 1.5rem;
-            }
-
-            .btn-register {
-                font-size: 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Registration</title>
+<link rel="stylesheet" href="../../src/style/registration.css">
 </head>
 <body>
 
-    <div class="register-container">
-        <h2>Register</h2>
-        <form id="register-form" action="reg" method="POST">
-            <!-- First Name input -->
-            <div class="input-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name"  maxlength="10" name="first-name"  required placeholder="Enter your first name">
-            </div>
+	<div class="register-container">
+		<h2>Register</h2>
+		<form id="register-form" action="reg" method="POST">
+			<!-- First Name input -->
+			<div class="input-group">
+				<label for="first-name">First Name</label> <input type="text"
+					id="first-name" maxlength="10" name="first-name" required
+					placeholder="Enter your first name">
+			</div>
 
-            <!-- Last Name input -->
-            <div class="input-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name"  maxlength="10" name="last-name" required placeholder="Enter your last name">
-            </div>
+			<!-- Last Name input -->
+			<div class="input-group">
+				<label for="last-name">Last Name</label> <input type="text"
+					id="last-name" maxlength="10" name="last-name" required
+					placeholder="Enter your last name">
+			</div>
 
-            <!-- Username input -->
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username"  maxlength="15" name="username" required placeholder="Enter your username">
-            </div>
+			<!-- Username input -->
+			<div class="input-group">
+				<label for="username">Username</label> <input type="text"
+					id="username" maxlength="15" name="username" required
+					placeholder="Enter your username">
+			</div>
 
-            <!-- Password input -->
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required placeholder="Enter a strong password">
-                <div class="password-strength" id="password-strength"></div>
-            </div>
+			<!-- Password input -->
+			<div class="input-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" required
+					placeholder="Enter a strong password">
+				<div class="password-strength" id="password-strength"></div>
+			</div>
 
-            <!-- Confirm Password input -->
-            <div class="input-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
-                <div class="password-error" id="password-error"></div>
-            </div>
+			<!-- Confirm Password input -->
+			<div class="input-group">
+				<label for="confirm-password">Confirm Password</label> <input
+					type="password" id="confirm-password" name="confirm-password"
+					required placeholder="Confirm your password">
+				<div class="password-error" id="password-error"></div>
+			</div>
 
-            <!-- Register Button -->
-            <button type="submit" class="btn-register" id="register-btn">Register</button>
-        </form>
+			<!-- Register Button -->
+			<button type="submit" class="btn-register" id="register-btn">Register</button>
+		</form>
 
-        <div class="login-redirect">
-            <p>Already have an account? <a href="./login.html">Login here</a></p>
-        </div>
-    </div>
+		<div class="login-redirect">
+			<p>
+				Already have an account? <a href="./login.html">Login here</a>
+			</p>
+		</div>
+	</div>
 
-    <script>
+
+	<script>
     
     	// Check Fist-name and Last-name contains only alphabate
     	

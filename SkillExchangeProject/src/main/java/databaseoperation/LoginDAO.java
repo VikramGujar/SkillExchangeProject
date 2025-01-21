@@ -1,5 +1,6 @@
 package databaseoperation;
 
+//Checking user data in database and if it is present then returning the UserDataBean object 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,10 +9,10 @@ import javabean.UserDataBean;
 
 public class LoginDAO {
 	
-	UserDataBean ub=null;
-	
+	//Method for storing user data in UserDataBean and returning the object
 	public UserDataBean checkLogin(String usename,String password)
 	{
+		UserDataBean ub=null;
 
 		try
 		{
@@ -36,7 +37,6 @@ public class LoginDAO {
 		{
 			e.printStackTrace();
 		}
-		
 		
 		return ub;
 		

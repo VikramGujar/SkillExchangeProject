@@ -1,5 +1,6 @@
 package databaseoperation;
 
+//Performing Registration process Storing the User Data in Database
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -9,6 +10,7 @@ public class RegistrationDAO {
 	
 	int k=0;
 	
+	//Method for getting UserDataBean object and storing in Data in Database if stored then returning k=1
 	public int addData(UserDataBean ub)
 	{
 		Connection con=DatabaseConnection.getConnection();
