@@ -1,5 +1,6 @@
 package databaseoperation;
 
+//Interface for Database information
 public interface DatabaseInfo {
 
 	//Database information

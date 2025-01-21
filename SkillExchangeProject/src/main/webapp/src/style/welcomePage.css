@@ -5,6 +5,11 @@
 	--bg-color: #F9FAFC;
 	--txt-color: #222;
 	--white-color: #fff;
+	
+	--btn-color: #FFC200;
+	--btn-hover-color: #ff9900;
+	--white-color: #ffffff;
+	--txt-color: #222222;
 }
 
 body {
@@ -21,8 +26,8 @@ header {
 	height: 10vh;
 }
 
-.logo img {
-	height: 40px;
+.welcomeMsg h1{
+	color: red;
 }
 
 .header-icons i {
@@ -41,13 +46,6 @@ header {
 }
 
 /*------------------------------- Home Section Styling -------------------------*/
-:root {
-	--btn-color: #FFC200;
-	--btn-hover-color: #ff9900;
-	--white-color: #ffffff;
-	--txt-color: #222222;
-}
-
 .home {
 	background-image: url('../../public/assets/image/hero-bg-2.jpg');
 	background-size: cover;

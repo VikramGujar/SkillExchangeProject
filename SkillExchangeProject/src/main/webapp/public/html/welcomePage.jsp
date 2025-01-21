@@ -14,17 +14,26 @@
     
 </head>
 <body>
+	
+	<!--------------------------------- JSP Code ------------------------------------------------->
+	<%
+		//Getting UserDataBean object
+		UserDataBean ub=(UserDataBean) session.getAttribute("userbean");
+	%>
+	
+	
+	
+	
     <!--------------------------------- Header Section ------------------------------------------------->
     
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="../assets/image/Header-logo.png" alt="SkillExchange Logo">
-            </div>
-            <div class="header-icons d-flex align-items-center">
+    	<div class="welcomeMsg">
+    		<h1>Welcome <span><%= ub.getFname()%></span></h1>
+    	</div>
+        
+        <div class="header-icons d-flex align-items-center">
                 <button class="btn btn-link text-white me-3"><i class="bi bi-bell"></i></button>
                 <button class="btn btn-link text-white"><i class="bi bi-person-circle"></i></button>
-            </div>
         </div>
     </header>
 

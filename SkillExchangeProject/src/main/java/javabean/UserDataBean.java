@@ -1,14 +1,17 @@
 package javabean;
 
+//JavaBean Class for data storing and getting 
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class UserDataBean implements Serializable{
 	
+	//User properties
 	private String fname,lname,username,pass;
 	
 	public UserDataBean() {}
 
+	//Getter and Setter for get and set the data
 	public String getFname() {
 		return fname;
 	}
