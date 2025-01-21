@@ -1,1 +1,39 @@
-/.metadata/
+# IDE-specific files
+.classpath
+.project
+.settings/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Compiled files
+*.class
+*.jar
+*.war
+
+# Node modules
+node_modules/
+
+# Database files
+*.db
+*.sqlite
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Java dependencies
+*.jar
+*.war
+
+# Eclipse IDE-related files
+bin/
+target/
