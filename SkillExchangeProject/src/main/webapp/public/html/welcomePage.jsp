@@ -4,141 +4,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to SkillExchange</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-	rel="stylesheet">
-<link rel="stylesheet" href="../../src/style/welcomePage.css">
-<link rel="stylesheet" href="wellcome.css">
-<style>
-:root {
-	--btn-color: #FFC200;
-	--bg-color: #F9FAFC;
-	--txt-color: #222;
-	--white-color: #fff;
-}
-
-body {
-	font-family: 'Arial', sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-/* Header Section Styling */
-header {
-	background: linear-gradient(to right, #ffe387, #ffd034);
-	color: var(--txt-color);
-	padding: 10px 20px;
-	height: 10vh;
-}
-
-.logo img {
-	height: 40px;
-}
-
-.header-icons i {
-	font-size: 1.5rem;
-	color: var(--txt-color);
-	transition: all 500ms;
-}
-
-.header-icons i:hover {
-	color: var(--bg-color);
-}
-
-.container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-/* Hero Section Styling */
-:root {
-	--btn-color: #FFC200;
-	--btn-hover-color: #ff9900;
-	--white-color: #ffffff;
-	--txt-color: #222222;
-}
-
-.hero {
-	background-image: url('../assets/image/hero-bg-2.jpg');
-	background-size: cover;
-	background-position: unset;
-	color: var(--white-color);
-	height: 90vh;
-	padding: 0;
-	position: relative;
-	display: flex;
-	overflow: hidden;
-}
-
-.hero .container {
-	z-index: 2;
-	display: flex;
-	flex-direction: column;
-}
-
-.slogun {
-	font-size: 3rem;
-	font-weight: bold;
-	position: relative;
-	bottom: 100px;
-	right: 400px;
-	width: 50%;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-.hero-paragraph {
-	font-size: 1.25rem;
-	position: relative;
-	bottom: 50px;
-	right: 400px;
-	width: 50%;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.hero-buttons {
-	position: relative;
-	right: 400px;
-	width: 50%;
-}
-
-.hero .btn {
-	font-size: 1.25rem;
-	padding: 15px 40px;
-	border-radius: 50px;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.hero .btn-primary {
-	background-color: var(--btn-color);
-	color: var(--white-color);
-	border: none;
-	transition: all 500ms;
-}
-
-.hero .btn-primary:hover {
-	background-color: var(--btn-hover-color);
-}
-
-.hero .btn-outline-light {
-	background-color: transparent;
-	border-color: var(--white-color);
-	color: var(--white-color);
-	transition: all 500ms;
-}
-
-.hero .btn-outline-light:hover {
-	background-color: var(--white-color);
-	color: var(--txt-color);
-}
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to SkillExchange</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../../src/style/welcomePage.css"/>
+	<style type="text/css">
+		
+		
+		
+	</style>
 </head>
 <body>
 
@@ -154,11 +30,7 @@ header {
 	<!--------------------------------- Header Section ------------------------------------------------->
 
 	<header>
-		<div class="welcomeMsg">
-			<h1>
-				Welcome <span><%=ub.getFname()%></span>
-			</h1>
-		</div>
+		
 
 		<div class="header-icons d-flex align-items-center">
 			<button class="btn btn-link text-white me-3">
@@ -167,7 +39,7 @@ header {
 			<button class="btn btn-link text-white">
 				<i class="bi bi-person-circle"></i>
 			</button>
-		</div>
+		</div> 
 	</header>
 
 	<!---------------------------------------- Home Section  ------------------------->
