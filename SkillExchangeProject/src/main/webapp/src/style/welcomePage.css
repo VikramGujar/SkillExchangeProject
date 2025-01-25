@@ -1,6 +1,7 @@
 
 /*------------------------------ Common style ---------------------------------- */
-:root {
+:root 
+{
 	--btn-color: #FFC200;
 	--bg-color: #F9FAFC;
 	--txt-color: #222;
@@ -12,22 +13,26 @@
 	--txt-color: #222222;
 }
 
-body {
+body 
+{
 	font-family: 'Arial', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
 /*-------------------------- Header Section Styling --------------------------*/
-header {
+header 
+{
 	background: linear-gradient(to right, #ffe387, #ffd034);
 	color: var(--txt-color);
 	padding: 10px 20px;
 	height: 10vh;
 }
 
-.welcomeMsg h1{
-	color: red;
+.welcomeMsg h1
+{
+	
+	color:green;
 }
 
 .header-icons i {
@@ -51,7 +56,7 @@ header {
 	background-size: cover;
 	background-position: unset;
 	color: var(--white-color);
-	height: 90vh;
+	height:20vh;
 	padding: 0;
 	position: relative;
 	display: flex;
