@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Registration</title>
+<link rel="stylesheet" href="../../src/style/registration.css">
+</head>
+<body>
+
+	<div class="register-container">
+		<h2>Register</h2>
+		<form id="register-form" action="reg" method="POST">
+			<!-- First Name input -->
+			<div class="input-group">
+				<label for="first-name">First Name</label> <input type="text"
+					id="first-name" maxlength="10" name="first-name" required
+					placeholder="Enter your first name">
+			</div>
+
+			<!-- Last Name input -->
+			<div class="input-group">
+				<label for="last-name">Last Name</label> <input type="text"
+					id="last-name" maxlength="10" name="last-name" required
+					placeholder="Enter your last name">
+			</div>
+
+			<!-- Username input -->
+			<div class="input-group">
+				<label for="username">Username</label> <input type="text"
+					id="username" maxlength="15" name="username" required
+					placeholder="Enter your username">
+			</div>
+
+			<!-- Password input -->
+			<div class="input-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" required
+					placeholder="Enter a strong password">
+				<div class="password-strength" id="password-strength"></div>
+			</div>
+
+			<!-- Confirm Password input -->
+			<div class="input-group">
+				<label for="confirm-password">Confirm Password</label> <input
+					type="password" id="confirm-password" name="confirm-password"
+					required placeholder="Confirm your password">
+				<div class="password-error" id="password-error"></div>
+			</div>
+
+			<!-- Register Button -->
+			<button type="submit" class="btn-register" id="register-btn">Register</button>
+		</form>
+
+		<div class="login-redirect">
+			<p>
+				Already have an account? <a href="./login.html">Login here</a>
+			</p>
+		</div>
+	</div>
+
+
+	<script>
+    
+    	// Check Fist-name and Last-name contains only alphabate
+    	
+    	function validateName(name) {
+    		// Checking format of fname and lname
+    		  const regex = /^[A-Za-z]+$/;
+    		  
+    		  return regex.test(name);
+    		}
+
+    	// validation of fist-name and last-name
+    		function validNames() {
+    		  
+    		  const firstName = document.getElementById("first-name").value;
+    		  const lastName = document.getElementById("last-name").value;
+
+    		  if (!validateName(firstName)) {
+    		    alert("Name should contain only alphabets.");
+    		    return false;
+    		  }
+
+    		  if (!validateName(lastName)) {
+    		    alert("Name should contain only alphabets.");
+    		    return false;
+    		  }
+    		  // if name is valid then it will return true
+    		  return true;
+    		}
+
+    
+        // Password Strength Validation
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const passwordStrengthDisplay = document.getElementById('password-strength');
+        const passwordErrorDisplay = document.getElementById('password-error');
+        const registerForm = document.getElementById('register-form');
+        const registerBtn = document.getElementById('register-btn');
+        
+        
+
+        function checkPasswordStrength(password) {
+            const strengthCriteria = [
+                /[A-Z]/,  // Uppercase letter
+                /[a-z]/,  // Lowercase letter
+                /[0-9]/,  // Number
+                /[\W_]/   // Special character
+            ];
+            let strength = 0;
+
+            strengthCriteria.forEach(pattern => {
+                if (pattern.test(password)) strength++;
+            });
+
+            if (strength === 0) {
+                passwordStrengthDisplay.textContent = 'Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.';
+                passwordStrengthDisplay.style.color = 'red';
+            } else if (strength === 1) {
+                passwordStrengthDisplay.textContent = 'Password strength: Weak';
+                passwordStrengthDisplay.style.color = 'red';
+            } else if (strength === 2) {
+                passwordStrengthDisplay.textContent = 'Password strength: Moderate';
+                passwordStrengthDisplay.style.color = 'orange';
+            } else {
+                passwordStrengthDisplay.textContent = 'Password strength: Strong';
+                passwordStrengthDisplay.style.color = 'green';
+            }
+        }
+
+        function validatePasswords() {
+            if (passwordField.value !== confirmPasswordField.value) {
+                passwordErrorDisplay.textContent = 'Passwords do not match.';
+                passwordErrorDisplay.style.color = 'red';
+                return false;
+            } else {
+                passwordErrorDisplay.textContent = '';
+                return true;
+            }
+        }
+
+        passwordField.addEventListener('input', () => {
+            checkPasswordStrength(passwordField.value);
+        });
+
+        confirmPasswordField.addEventListener('input', validatePasswords);
+
+    </script>
+
+</body>
+</html>
