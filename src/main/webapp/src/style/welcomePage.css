@@ -50,6 +50,56 @@ header
 	align-items: center;
 }
 
+/*------------------------------- Nav Section start -------------------------*/
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .social-icons{
+	position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate( -50%, -50% );
+}
+.social-icons a{
+	text-decoration: none;
+	transition : 1s;
+	border-radius: 100px;
+}
+.social-icons a:hover{
+	
+}
+/*-------------------------------- Nav Section end --------------------------*/
+/*-------------------------------- Menu Section start -------------------------*/
+.offcanvas{
+	border-radius: 50px 0px 0px 50px;
+	background: rgb(255 255 255 / 18%);
+	backdrop-filter: blur(20px);	
+	border-left: 2px solid #fff; 
+}
+.profile-pic {
+	border: 3px solid #A5AEB1;
+	border-radius: 50px;
+	padding: 15px;
+	cursor: pointer;
+}
+.offcanvas-header{
+	display:flex;
+	justify-content : center;
+	align-items: center;
+	flex-direction: column; 
+	gap: 15px;	
+}
+.offcanvas-body{
+	padding: 30px;
+}
+.offcanvas-body .navbar-nav .nav-item .nav-link{
+	margin: 2px;
+}
+	
+
+/*--------------------------------- Menu Section end --------------------------*/
 /*------------------------------- Home Section Styling -------------------------*/
 .home {
 	background-image: url('../../public/assets/image/hero-bg-2.jpg');
@@ -104,7 +154,6 @@ header
 
 .home .btn-primary {
 	background-color: var(--btn-color);
-	color: var(--white-color);
 	border: none;
 }
 
