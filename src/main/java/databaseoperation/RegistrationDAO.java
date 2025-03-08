@@ -17,12 +17,14 @@ public class RegistrationDAO {
 		
 		try
 		{
-			PreparedStatement ps=con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?,?,?)");
 			
 			ps.setString(1, ub.getFname());
 			ps.setString(2, ub.getLname());
 			ps.setString(3, ub.getUsername());
 			ps.setString(4, ub.getPass());
+			ps.setString(5, ub.getEmail());
+			ps.setLong(6, ub.getPhno());
 			
 			k=ps.executeUpdate();
 			
