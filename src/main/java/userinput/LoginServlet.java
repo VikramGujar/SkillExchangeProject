@@ -2,7 +2,7 @@ package userinput;
 
 import java.io.IOException;
 
-import databaseoperation.LoginDAO;
+import DatabaseDAO.LoginDAO;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

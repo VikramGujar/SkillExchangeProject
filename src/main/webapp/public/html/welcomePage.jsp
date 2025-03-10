@@ -16,8 +16,8 @@
 
 	<!--------------------------------- JSP Code ------------------------------------------------->
 	<%
-	//Getting UserDataBean object
-	UserDataBean ub = (UserDataBean) session.getAttribute("userbean");
+		//Getting UserDataBean object
+		UserDataBean ub = (UserDataBean) session.getAttribute("userbean");
 	%>
 	
 	<!--------------------------------- Nav Section start------------------------------------------------->
@@ -71,7 +71,7 @@
 	      <div class="offcanvas-body">
 	        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 	          <li class="nav-item">
-	            <a class="nav-link" href="#">View Profile</a>
+	            <a class="nav-link" href="<%= request.getContextPath() %>/view?username=<%= ub.getUsername()%>">View Profile</a>
 	          </li>
 	          <li class="nav-item">
 	          	<a class="nav-link" href="#">Edit Profile</a></li>
