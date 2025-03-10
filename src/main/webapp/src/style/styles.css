@@ -230,16 +230,16 @@ header {
     height: auto;
     object-fit: cover;
   	border-radius: 5px;
-  	transition: transform 0.3s ease-in-out;
+  	transition: all 1s ease;
   	  
 }
 
 .left-image img:hover{
-	transform: scale(1.5);
+	transform: scale(1.2);
 } 
 
 .right-image img:hover{
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
 
 .our-mission, 
