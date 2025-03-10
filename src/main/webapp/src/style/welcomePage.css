@@ -76,7 +76,7 @@ header
 	border-radius: 50px 0px 0px 50px;
 	background: rgb(255 255 255 / 18%);
 	backdrop-filter: blur(20px);	
-	border-left: 2px solid #fff; 
+	border-left: 1px solid #f1f1f1 !important; 
 }
 .profile-pic {
 	border: 3px solid #A5AEB1;
@@ -96,25 +96,30 @@ header
 }
 .offcanvas-body .navbar-nav .nav-item .nav-link{
 	margin: 2px;
+	transition: 0.2;
 }
-	
-
+.offcanvas-body .navbar-nav .nav-item .nav-link:hover{
+	font-weight: 600;
+}
 /*--------------------------------- Menu Section end --------------------------*/
+
 /*------------------------------- Home Section Styling -------------------------*/
 .home {
 	background-image: url('../../public/assets/image/hero-bg-2.jpg');
 	background-size: cover;
-	background-position: unset;
+	/* background-position: unset;*/
 	color: var(--white-color);
 	height:100vh;
-	padding: 0;
+	padding-top: 125px;
 	position: relative;
 	display: flex;
-	overflow: hidden;
+	overflow: hidden;	
 }
 
 .home .container {
-	z-index: 2;
+	/* z-index: 2; */
+	width: 100%;
+	max-width: auto;
 	display: flex;
 	flex-direction: column;
 }
@@ -170,4 +175,13 @@ header
 .home .btn-outline-light:hover {
 	background-color: var(--white-color);
 	color: var(--txt-color);
+}
+@media (max-width:952px) {
+	.home .container{
+		min-width: 250px;
+	}
+}
+
+@media (max-width:858px){
+	
 }
