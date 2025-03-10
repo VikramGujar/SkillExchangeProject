@@ -3,7 +3,7 @@ package userinput;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import databaseoperation.RegistrationDAO;
+import DatabaseDAO.RegistrationDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
