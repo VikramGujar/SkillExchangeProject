@@ -105,7 +105,7 @@
 				fostering a collaborative environment for skill-sharing and mutual
 				growth, with a focus on personal and professional development.</p>
 			<div class="home-buttons">
-				<a href="#start" class="btn btn-primary btn-lg me-3">Start Your Journey</a> 
+				<a href="startJourneyForm.html" class="btn btn-primary btn-lg me-3">Start Your Journey</a> 
 				<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			</div>
 		</div>
