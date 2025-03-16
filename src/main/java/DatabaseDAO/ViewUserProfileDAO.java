@@ -10,18 +10,23 @@ import databaseoperation.DatabaseConnection;
 import javabean.UserDataBean;
 
 public class ViewUserProfileDAO {
-	
+
 	public ArrayList<UserDataBean> viewProfile(String username) throws SQLException {
 		ArrayList<UserDataBean> list = new ArrayList<UserDataBean>();
 		UserDataBean ub = null;
+<<<<<<< HEAD
 		try(Connection con2 = DatabaseConnection.getConnection()) {
 			
+=======
+		try {
+			Connection con2 = DatabaseConnection.getConnection();
+>>>>>>> 23a437eedd8ae29b4e3160cb5aa3b4054d95a320
 			PreparedStatement ps = con2.prepareStatement("select * from skillExchangeusers WHERE username=?");
-			
-			//Adding UserName
+
+			// Adding UserName
 			ps.setString(1, username);
-			
-			//Getting Result
+
+			// Getting Result
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				ub = new UserDataBean();
@@ -32,8 +37,7 @@ public class ViewUserProfileDAO {
 				ub.setPhno(rs.getLong(6));
 				list.add(ub);
 			}
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return list;

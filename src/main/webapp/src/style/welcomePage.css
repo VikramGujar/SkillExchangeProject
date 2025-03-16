@@ -70,6 +70,11 @@ header
 .social-icons a:hover{
 	
 }
+.social-icons a img{
+	width: 15px;
+	margin: 30px;
+	border: 2px solid red;
+}
 /*-------------------------------- Nav Section end --------------------------*/
 /*-------------------------------- Menu Section start -------------------------*/
 .offcanvas{
