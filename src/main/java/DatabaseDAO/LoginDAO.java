@@ -1,10 +1,11 @@
-package databaseoperation;
+package DatabaseDAO;
 
 //Checking user data in database and if it is present then returning the UserDataBean object 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import databaseoperation.DatabaseConnection;
 import javabean.UserDataBean;
 
 public class LoginDAO {
