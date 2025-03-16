@@ -14,13 +14,10 @@ public class ViewUserProfileDAO {
 	public ArrayList<UserDataBean> viewProfile(String username) throws SQLException {
 		ArrayList<UserDataBean> list = new ArrayList<UserDataBean>();
 		UserDataBean ub = null;
-<<<<<<< HEAD
-		try(Connection con2 = DatabaseConnection.getConnection()) {
 			
-=======
+
 		try {
 			Connection con2 = DatabaseConnection.getConnection();
->>>>>>> 23a437eedd8ae29b4e3160cb5aa3b4054d95a320
 			PreparedStatement ps = con2.prepareStatement("select * from skillExchangeusers WHERE username=?");
 
 			// Adding UserName

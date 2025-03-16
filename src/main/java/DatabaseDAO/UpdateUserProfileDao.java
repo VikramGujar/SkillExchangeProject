@@ -8,7 +8,7 @@ import databaseoperation.DatabaseConnection;
 import javabean.UserDataBean;
 
 public class UpdateUserProfileDao {
-
+//it will show the information for updation
 	public UserDataBean getByUsername(String uname) {
 		UserDataBean ub=null;
 		try{
@@ -29,6 +29,23 @@ public class UpdateUserProfileDao {
 			e.printStackTrace();
 		}
 		return ub;
+	}
+	public int update(UserDataBean user) {
+		int k=0;
+		//it will set the new values(update the record)
+		try(Connection con=DatabaseConnection.getConnection()) {
+			PreparedStatement ps=con.prepareStatement("update skillexchangeusers set FIRSTNAME=?,LASTNAME=?,EMAIL=? ,PHONENUMBER=? where username=?");
+			ps.setString(1,user.getFname());
+			ps.setString(2,user.getLname());
+			ps.setString(3, user.getEmail());
+			ps.setLong(4,user.getPhno());
+			ps.setString(5, user.getUsername());
+			k = ps.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return k;
 	}
 	
 }

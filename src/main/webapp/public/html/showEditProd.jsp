@@ -13,7 +13,7 @@
 UserDataBean msg=(UserDataBean)request.getAttribute("user");
 %>
 
-<h1>Update Product</h1>
+<h1>Update User</h1>
 <div class="form-container">
     <form action="update" method="post">
         <p>
