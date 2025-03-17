@@ -95,6 +95,9 @@ button, .btn{
 	gap:20px;
 }
 
+ul{
+	list-style: none;
+}
 
 /*--------------------------------Login Button----------------------------------*/
 
@@ -297,7 +300,7 @@ button, .btn{
 #review h2 {
     text-align: center;
     font-size: 2rem;
-    color: var(--txt-color);
+    color:var(--btn-color);
     margin-bottom: 2rem;
 }
 
@@ -306,9 +309,6 @@ button, .btn{
     background-color: var(--bg-color);
 }
 
-.reviews h2{
-	color:var(--btn-color);
-}
 
 .review-container {
     display: grid;
@@ -385,7 +385,7 @@ button, .btn{
 
 .contact-form-container {
     flex: 1;
-    min-width: 45%;
+    min-width: 40%;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
@@ -394,7 +394,7 @@ button, .btn{
 }
 
 .contact-info-container {
-    min-width: 45%;
+    min-width: 40%;
     display: flex;
     flex-direction: column;
     padding-left: 30px;
@@ -409,17 +409,14 @@ button, .btn{
     align-items: flex-start;
 }
 
-.contact-form label {
-    text-align: left;
-    color: var(--txt-color);
-    font-size: 1.1rem;
-    width: 100%;
-    margin-bottom: 5px;
+.name{
+	display: flex;
+	gap:10px;
+	width: 93%;
 }
-
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 88%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -451,10 +448,12 @@ button, .btn{
 }
 
 .contact-item{
-	padding: 10px;
+	padding: 5px;
+	margin-left: 20px;
 	display: flex;
 	color:black;
 	gap:10px;
+	align-items: center;
 
 }
 
@@ -466,161 +465,58 @@ button, .btn{
 }
 
 
-
-
-/*
-.contact-info-container h3 {
-    color: var(--btn-color);
-	float: left;
-}
-
-.contact-info-container h2 {
-	float: left;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.contact-info-header h2 {
+	color:var(--btn-color);
 }
 
 
-
-
-
-.contact-info-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-info-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
-
-.contact-info-container p {
-    color: var(--txt-color);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-
-.contact-item {
-    font-size: 1.2rem;
-    color: var(--txt-color);
-}
-
-.contact-item a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: var(--clor-light);   
-    text-shadow: 0 0 20px var(--clor-b); 
-}
-
-.contact-section h2 {
-    color: var(--txt-color);
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.contact-section p {
-    color: var(--txt-color);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--btn-color);
-    box-shadow: 0 0 5px rgba(255, 194, 0, 0.5);
-}
-
-*/
 
 /*------------------- Footer Section Style --------------------------------*/
 
 
 footer {
-  background-color: #08132b;
+  width: 100%;
+  height : 300px;
+  background-color: #363535;
   color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
+  padding:0;
+  margin: 0;
+  flex-direction:column;
+  width : 100%;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-logo img {
   width: 200px;
-	margin-left: -50px;
 }
 
 .footer-gratitude p {
   color:ver(--text-color-white);
   font-size: 14px;
-  max-width: 300px;
+  width: 100%;
+  height:  50px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.footer-links, .social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links a:hover{
-	margin-left:10px;
-    text-shadow: 0 0 20px var(--clor-b); 
-	transition:0.5s;
-}
-
-.footer-links li, .social-links li {
-  display: block;
-}
-
-.footer-links a, .social-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-}
-
-.footer-links a:hover, .social-links a:hover {
-  color: var(--clor-light);   
-  text-shadow: 0 0 20px var(--clor-b); 
-}
-
-.social-links a i {
-  font-size: 18px;
-  margin-right: 8px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+.footer-bottom{
+	background-color: #535050;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	
 }
 
 #current-year {
@@ -672,6 +568,8 @@ ul {
   
 }
 
+/*------------------------------------------------- About Section -------------------------------------------*/
+
 @media screen and (max-width: 1000px) {
 	.about-part-one,
 	.about-part-two {
@@ -680,10 +578,37 @@ ul {
     justify-content: center;
     align-items:center;
 }
+.right-info,
+.left-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-image,
+.right-image {
+    width: 55%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  	border-radius: 5px;
+  	cursor: pointer;
+}
 	
 	
 	
 	}
+	
+	
+/*------------------------------------------------- Contact section  -------------------------------------------*/
+	@media screen and (max-width: 900px) {
+	.contact-content {
+	flex-direction: column;
+	}
+}
+	
 
 
 
