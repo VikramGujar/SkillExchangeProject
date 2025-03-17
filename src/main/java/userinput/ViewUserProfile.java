@@ -40,12 +40,10 @@ public class ViewUserProfile extends HttpServlet {
 			ArrayList<UserDataBean> view = udao.viewProfile(username);
 			if (view.isEmpty()) 
 			{
-				System.out.println("inside if");
 				req.setAttribute("msg", "User Data Not Found");
 				req.getRequestDispatcher("WelcomePage.jsp").forward(req, res);
 			} 
 			else {
-				System.out.println("inside else");
 				req.setAttribute("profile", view);
 				req.getRequestDispatcher("/public/html/ViewUserProfile.jsp").forward(req, res);
 			}

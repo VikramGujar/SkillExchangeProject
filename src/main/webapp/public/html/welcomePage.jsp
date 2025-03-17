@@ -114,9 +114,14 @@
 				fostering a collaborative environment for skill-sharing and mutual
 				growth, with a focus on personal and professional development.</p>
 			<div class="home-buttons">
+<<<<<<< HEAD
+				<a href="startJourneyForm.html" class="btn btn-primary btn-lg me-3">Start Your Journey</a> 
+				<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+=======
 				<a href="#start" class="btn btn-primary btn-lg me-3">Start Your
 					Journey</a> <a href="#about" class="btn btn-outline-light btn-lg">Learn
 					More</a>
+>>>>>>> branch 'master' of https://github.com/GokulLade/SkillExchangeProject.git
 			</div>
 		</div>
 	</section>
