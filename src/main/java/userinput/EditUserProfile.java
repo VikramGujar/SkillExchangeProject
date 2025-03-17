@@ -37,9 +37,11 @@ public class EditUserProfile extends HttpServlet {
 			} 
 		
 		 else {
+			 System.out.println("edit user profile");
 			req.setAttribute("user", ub);
 			req.getRequestDispatcher("/public/html/showEditProd.jsp").forward(req, resp);
-		}
+		
+		 }
 		}
 		catch(Exception e) {
 			e.printStackTrace();

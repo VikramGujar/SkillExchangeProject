@@ -21,7 +21,7 @@ import javabean.UserDataBean;
 			 pdao=new UpdateUserProfileDao();
 		}
 		@Override
-		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			String fname = req.getParameter("fname");
 			String lname = req.getParameter("lname");
 			String uname= req.getParameter("uname");
@@ -36,11 +36,11 @@ import javabean.UserDataBean;
 			if(k>0) {
 				req.setAttribute("msg","Details Updated Successfully");
 				System.out.println("details updated ");
-				req.getRequestDispatcher("/public/html/WelcomePage.jsp").forward(req, resp);
+				req.getRequestDispatcher("/public/html/ViewUpdateUserProfile.jsp").forward(req, resp);
 			}
 			else {
 				req.setAttribute("msg","Details Not Updated");
-				req.getRequestDispatcher("/public/html/WelcomePage.jsp").forward(req, resp);
+				req.getRequestDispatcher("/public/html/ViewUpdateUserProfile.jsp").forward(req, resp);
 			}
 		}
 	}

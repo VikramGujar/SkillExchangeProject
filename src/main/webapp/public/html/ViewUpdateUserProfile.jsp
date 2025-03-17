@@ -28,6 +28,7 @@
             <th>Username</th>
             <th>Email</th>
             <th>Phone No</th>
+            <!-- <th>Profile Photo</th> --><!-- image -->
             <th>Operation</th>
         </tr>
         <% for (UserDataBean view : al) { %>

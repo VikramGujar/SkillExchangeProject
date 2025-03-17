@@ -21,8 +21,8 @@ public class UpdateUserProfileDao {
 				ub.setFname(rs.getString(1));
 				ub.setLname(rs.getString(2));
 				ub.setUsername(rs.getString(3));
-				ub.setEmail(rs.getString(4));
-				ub.setPhno(rs.getLong(5));
+				ub.setEmail(rs.getString(5));//changes ac to database no
+				ub.setPhno(rs.getLong(6));//changes
 			}
 		}
 		catch(Exception e) {
@@ -33,7 +33,8 @@ public class UpdateUserProfileDao {
 	public int update(UserDataBean user) {
 		int k=0;
 		//it will set the new values(update the record)
-		try(Connection con=DatabaseConnection.getConnection()) {
+		try{
+			Connection con=DatabaseConnection.getConnection();
 			PreparedStatement ps=con.prepareStatement("update skillexchangeusers set FIRSTNAME=?,LASTNAME=?,EMAIL=? ,PHONENUMBER=? where username=?");
 			ps.setString(1,user.getFname());
 			ps.setString(2,user.getLname());
@@ -47,5 +48,6 @@ public class UpdateUserProfileDao {
 		}
 		return k;
 	}
+		
 	
 }
