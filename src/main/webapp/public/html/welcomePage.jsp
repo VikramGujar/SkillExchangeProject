@@ -30,10 +30,10 @@
 	<nav class="navbar fixed-top">
 		<div class="container-fluid">
 			<!-- d-flex justify-content-between  -->
-			<div class="navbar-brand d-flex" href="#">
-				<div>
-					<a href="#"> <img alt="Logo not found"
-						src="../assets/image/Header-logo.png" width="10%">
+			<div class="navbar-brand d-flex justify-content-between w-100" href="#">
+				<div class="logo">
+					<a href="#"> 
+						<img alt="Logo not found" src="../assets/image/Header-logo.png">
 					</a>
 				</div>
 
@@ -51,7 +51,12 @@
 					</a>
 				</div>
 
-				<div>
+				<div class="menu-icon d-flex justify-content-between h-25">
+					<div class="notification-icon">
+						<a >
+							<img alt="Notification" src="../assets/image/loged-In/notification.png">
+						</a>
+					</div>
 					<button class="navbar-toggler border border-0" type="button"
 						data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
 						aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -90,9 +95,8 @@
 
 
 
-						<li class="nav-item"><a class="nav-link" href="#">Settings</a>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="#">Notifications</a>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Settings</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="#">Help</a></li>
 						<li><a class=" btn btn-outline-danger" href="#">Logout</a></li>
@@ -105,19 +109,80 @@
 
 	<!--------------------------------- Header Section ------------------------------------------------->
 	<!---------------------------------- Home Section  ------------------------->
-
-	<section class="home d-flex justify-content-center align-items-center">
+	<!-- 
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>
+					Share Your Knowledge. Unlock Your Potential.
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>
+					SkillExchange is a platform
+					where users can teach what they know and learn what they don't,
+					fostering a collaborative environment for skill-sharing and mutual
+					growth, with a focus on personal and professional development.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<button>
+					<a href="#start" class="btn btn-primary btn-lg me-3">Start Your Journey</a>
+				</button>
+			</div>
+			<div class="col">
+				<button>
+					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+				</button>
+			</div>
+		</div>
+	</div>
+	 -->	
+	 <section class="home d-flex justify-content-center align-items-center">
 		<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1>
+					Share Your Knowledge. Unlock Your Potential.
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<p>
+					SkillExchange is a platform
+					where users can teach what they know and learn what they don't,
+					fostering a collaborative environment for skill-sharing and mutual
+					growth, with a focus on personal and professional development.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+					<a href="#start" class="btn  border-0 btn-start">Start Your Journey</a>
+			</div>
+			<div class="col">
+					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+				
+			</div>
+		</div>
+		
+		
+			<!-- 
 			<h1 class="slogun">Share Your Knowledge. Unlock Your Potential.</h1>
 			<p class="lead mb-4 home-paragraph">SkillExchange is a platform
 				where users can teach what they know and learn what they don't,
 				fostering a collaborative environment for skill-sharing and mutual
 				growth, with a focus on personal and professional development.</p>
 			<div class="home-buttons">
-				<a href="#start" class="btn btn-primary btn-lg me-3">Start Your
-					Journey</a> <a href="#about" class="btn btn-outline-light btn-lg">Learn
-					More</a>
-			</div>
+				<a href="#start" class="btn btn-primary btn-lg me-3">Start Your Journey</a> 
+				<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+			</div> -->
+			
 		</div>
 	</section>
 
