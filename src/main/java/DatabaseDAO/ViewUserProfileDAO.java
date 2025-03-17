@@ -14,6 +14,7 @@ public class ViewUserProfileDAO {
 	public ArrayList<UserDataBean> viewProfile(String username) throws SQLException {
 		ArrayList<UserDataBean> list = new ArrayList<UserDataBean>();
 		UserDataBean ub = null;
+
 			
 
 		try {
