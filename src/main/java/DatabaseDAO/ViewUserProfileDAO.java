@@ -15,8 +15,8 @@ public class ViewUserProfileDAO {
 		ArrayList<UserDataBean> list = new ArrayList<UserDataBean>();
 		UserDataBean ub = null;
 
-			
 
+		
 		try {
 			Connection con2 = DatabaseConnection.getConnection();
 			PreparedStatement ps = con2.prepareStatement("select * from skillExchangeusers WHERE username=?");

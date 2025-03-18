@@ -187,17 +187,22 @@
 					<h2>Get in Touch</h2>
 					<h3>Let’s Chat, Reach Out to Us</h3>
 					<p>Have questions or feedback? We’re here to help. Send us a message, & we’ll respond within 24 hours</p>
+					<hr style="margin: 10px 0 10px 0; width: 93%;">
 				</div>
 					<form action="" method="POST" class="contact-form">
 					
-							<label for="name">Full Name</label> 
-							<input type="text" id="name" name="name" placeholder="Your Name" required> 
+							<div class="name">
+							<input type="text" id="fname" name="fname" placeholder="First Name" required> 
+							<input type="text" id="lname" name="lname" placeholder="Last Name" required> 
+							</div>
 							
-							<label for="email">Email Address</label> 
-							<input type="email" id="email" name="email" placeholder="Your Email" required> 
+							<input type="email" id="email" name="email" placeholder="Email" required> 
+
+							<textarea id="message" name="message" placeholder="Leave us a Message" required></textarea>
+							<span style="display: flex;">
+							<input type="checkbox" style="width: 12px; margin-right: 5px;"> <label>I Agree to our friendly <u> privecy policy </u></label>
+							</span>
 							
-							<label for="message">Message</label>
-							<textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
 						<button type="submit" class="btn">Submit</button>
 					</form>
@@ -213,11 +218,13 @@
 				
 					<div class="contact-item">
 							<span class="contact-icon"><i class="bi bi-envelope-arrow-up-fill"></i></span>
-							<strong>Email:</strong> <a href="mailto:skillexchange@gmail.com">skillexchange@gmail.com</a>
+							<div style="display: flex; flex-direction: column;"><strong>Email:</strong> <a href="mailto:skillexchange@gmail.com"><u>skillexchange@gmail.com</u></a></div>
+							
 						</div>
 					<div class="contact-item">
 							<span class="contact-icon"><i class="bi bi-telephone-outbound-fill"></i></span>
-							<strong>Phone:</strong> <a href="tel:+919577014555">+91 9577014555</a>
+							<div style="display: flex; flex-direction: column;"><strong>Phone:</strong> <a href="tel:+919577014555"><u>+91 9577014555</u></a></div>
+							
 					</div>
 				
 				
@@ -233,86 +240,22 @@
 			
 		</div>
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			<!--  
-			
-			
-			
-					
-						
-					</div>
-					<div>
-						
-					</div>
-					<div>
-						
-					</div>
-					
-								</div>
-				</div>
-				<div  class="contact-details">
-				<div>
-					
-				</div>
-				
-				<div>
-						
-				</div>
-				
-						
-						
-					
-				
-			</div>
-		</div>
-		</div>    -->
+		
 	</section>
 
 	<!----------------------------------- Footer Section --------------------------------------------->
 	<footer>
 		<div class="footer-container">
-			<div class="footer-logo" style="width: 20%;">
+			<div class="footer-logo">
 				<img src="public/assets/image/Header_logo-2.png"
 					alt="SkillExchange Logo" />
 			</div>
 
 
-			<div class="footer-gratitude" style="width: 40%;">
+			<div class="footer-gratitude">
 				<p>We are grateful for the opportunity to help others learn and
 					grow. Thank you for being a part of our journey!</p>
 			</div>
-
-
-			<div class="footer-links" style="width: 20%;">
-				<ul>
-					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#home">Home</a></li>
-					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#about">About</a></li>
-					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#review">Review</a></li>
-					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-
-
-			<div class="social-links" style="width: 20%;">
-				<ul>
-					<li><a href="linkedin" target="_blank"><i
-							class="bi bi-linkedin"></i> LinkedIn</a></li>
-					<li><a href="github" target="_blank"><i
-							class="bi bi-github"></i> GitHub</a></li>
-					<li><a href="facebook" target="_blank"><i
-							class="bi bi-facebook"></i> Facebook</a></li>
-					<li><a href="instagram" target="_blank"><i
-							class="bi bi-instagram"></i> Instagram</a></li>
-				</ul>
-			</div>
-		</div>
 
 
 		<div class="footer-bottom">
@@ -320,6 +263,7 @@
 				&copy; <span id="current-year"></span> SkillExchange. All rights
 				reserved.
 			</p>
+		</div>
 		</div>
 	</footer>
 
