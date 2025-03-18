@@ -52,9 +52,12 @@ header
 
 /*------------------------------- Nav Section start -------------------------*/
 .navbar-brand{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+}
+.logo{
+	width: 125px;
+}
+.logo a img{
+	width: 125px;
 }
  .social-icons{
 	position: absolute;
@@ -71,9 +74,11 @@ header
 	
 }
 .social-icons a img{
-	width: 15px;
-	margin: 30px;
-	border: 2px solid red;
+	width: 22px;
+	margin: 1px;
+}
+.menu-icon{
+	width: 100px;	
 }
 /*-------------------------------- Nav Section end --------------------------*/
 /*-------------------------------- Menu Section start -------------------------*/
@@ -106,6 +111,7 @@ header
 .offcanvas-body .navbar-nav .nav-item .nav-link:hover{
 	font-weight: 600;
 }
+
 /*--------------------------------- Menu Section end --------------------------*/
 
 /*------------------------------- Home Section Styling -------------------------*/
@@ -120,9 +126,16 @@ header
 	display: flex;
 	overflow: hidden;	
 }
+.btn-start{	
+	background-image: linear-gradient(#6F69E8, #332F80) !important;
+}
 
+.btn-start:hover, .btn-start:active, .btn-start:visited{	
+	color: #fff !important;
+}
+/*
 .home .container {
-	/* z-index: 2; */
+	 z-index: 2; 
 	width: 100%;
 	max-width: auto;
 	display: flex;
@@ -189,4 +202,4 @@ header
 
 @media (max-width:858px){
 	
-}
+}*/
