@@ -19,7 +19,7 @@ public class EditUserProfile extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-		String uname = req.getParameter("uname");
+		String uname = req.getParameter("username");
 		System.out.println(uname);
 		UserDataBean ub = new UpdateUserProfileDao().getByUsername(uname);
 		
@@ -37,9 +37,11 @@ public class EditUserProfile extends HttpServlet {
 			} 
 		
 		 else {
+			 System.out.println("edit user profile");
 			req.setAttribute("user", ub);
-			req.getRequestDispatcher("showEditProd.jsp").forward(req, resp);
-		}
+			req.getRequestDispatcher("/public/html/showEditProd.jsp").forward(req, resp);
+		
+		 }
 		}
 		catch(Exception e) {
 			e.printStackTrace();

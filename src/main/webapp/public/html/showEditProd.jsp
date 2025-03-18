@@ -12,9 +12,9 @@
 UserDataBean msg=(UserDataBean)request.getAttribute("user");
 %>
 
-<h1>Update Product</h1>
+<h1>Update User</h1>
 <div class="form-container">
-    <form action="update" method="post">
+    <form action="update" method="Get">
         <p>
             <label for="fname">FirstName</label>
             <input type="text" name="fname" id="fname"   value="<%=msg.getFname()%>">
@@ -25,7 +25,7 @@ UserDataBean msg=(UserDataBean)request.getAttribute("user");
         </p>
         <p>
             <label for="username">Username</label>
-            <input type="text" name="uname" id="price" readonly="readonly" value="<%=msg.getUsername()%>">
+            <input type="text" name="uname" id="uname" readonly="readonly" value="<%=msg.getUsername()%>">
         </p>
         <p>
             <label for="email">Email</label>
@@ -35,6 +35,7 @@ UserDataBean msg=(UserDataBean)request.getAttribute("user");
             <label for="phno">Phone Number</label>
             <input type="text" name="phno" id="phno" value="<%=msg.getPhno()%>">
         </p>
+        
         <input type="submit" value="Update">
     </form>
 </div>
