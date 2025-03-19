@@ -1,7 +1,5 @@
 package userinput;
 
-import jakarta.servlet.annotation.WebServlet;
-
 import java.io.IOException;
 
 import DatabaseDAO.UpdateUserProfileDao;
@@ -40,19 +38,15 @@ public class EditUserProfile extends HttpServlet {
 			 System.out.println("edit user profile");
 			req.setAttribute("user", ub);
 			req.getRequestDispatcher("/public/html/showEditProd.jsp").forward(req, resp);
+<<<<<<< HEAD
+		}
+=======
 		
 		 }
+>>>>>>> branch 'master' of https://github.com/GokulLade/SkillExchangeProject.git
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-//			else {
-//			req.setAttribute("msg", "User not found");
-//			req.getRequestDispatcher("/public/html/WelcomePage.jsp").forward(req, resp);
-//		}
 	}
 }
-//else (ub != null) {
-//	req.setAttribute("user", ub);
-//	req.getRequestDispatcher("showEditProd.jsp").forward(req, resp);
-//}
