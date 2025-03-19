@@ -163,7 +163,7 @@
 		</div>
 		<div class="row">
 			<div class="col">
-					<a href="#start" class="btn  border-0 btn-start">Start Your Journey</a>
+					<a href="startJourneyForm.html" class="btn  border-0 btn-start">Start Your Journey</a>
 			</div>
 			<div class="col">
 					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>

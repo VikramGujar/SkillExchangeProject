@@ -6,13 +6,17 @@
 }
 
 body {
-    background-color: #000558;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, rgba(27, 53, 165, 0.5) 10%, transparent 50%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, white 50%),
+        url('../../public/assets/image/bg-imageForStartJourneyForm.jpg');
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
 }
+
 
 .container {
     background-color: white;

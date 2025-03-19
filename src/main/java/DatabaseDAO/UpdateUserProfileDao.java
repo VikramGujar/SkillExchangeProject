@@ -21,12 +21,12 @@ public class UpdateUserProfileDao {
 				ub.setFname(rs.getString(1));
 				ub.setLname(rs.getString(2));
 				ub.setUsername(rs.getString(3));
-				ub.setEmail(rs.getString(4));
-				ub.setPhno(rs.getLong(5));
+				ub.setEmail(rs.getString(5));
+				ub.setPhno(rs.getLong(6));
 			}
 		}
 		catch(Exception e) {
-			e.printStackTrace();
+			e.printStackTrace();  
 		}
 		return ub;
 	}

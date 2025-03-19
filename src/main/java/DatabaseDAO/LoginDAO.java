@@ -14,10 +14,11 @@ public class LoginDAO {
 	public UserDataBean checkLogin(String usename,String password)
 	{
 		UserDataBean ub=null;
+		Connection con=null;
 
 		try
 		{
-			Connection con=DatabaseConnection.getConnection();
+			con=DatabaseConnection.getConnection();
 	
 			PreparedStatement ps=con.prepareStatement("Select * from skillexchangeusers Where username=? AND password=?");
 			
@@ -41,6 +42,7 @@ public class LoginDAO {
 		}
 		catch(Exception e)
 		{
+			System.out.println(con);
 			e.printStackTrace();
 		}
 		
