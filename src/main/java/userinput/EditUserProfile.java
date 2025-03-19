@@ -35,9 +35,15 @@ public class EditUserProfile extends HttpServlet {
 			} 
 		
 		 else {
+			 System.out.println("edit user profile");
 			req.setAttribute("user", ub);
 			req.getRequestDispatcher("/public/html/showEditProd.jsp").forward(req, resp);
+<<<<<<< HEAD
 		}
+=======
+		
+		 }
+>>>>>>> branch 'master' of https://github.com/GokulLade/SkillExchangeProject.git
 		}
 		catch(Exception e) {
 			e.printStackTrace();

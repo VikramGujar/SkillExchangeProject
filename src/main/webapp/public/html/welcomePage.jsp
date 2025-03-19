@@ -109,18 +109,19 @@
 
 	<!--------------------------------- Header Section ------------------------------------------------->
 	<!---------------------------------- Home Section  ------------------------->
-	<!-- 
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h1>
-					Share Your Knowledge. Unlock Your Potential.
+	
+	 <section class="home w-100">
+		<div class="container d-flex h-75 flex-column align-items-start align-content-center justify-content-center gap-2 ">
+		<div class="row ">
+			<div class="col-8">
+				<h1 class="heading fw-bolder mb-5 min-vw-100 w-75 text-break">
+					Share Your Knowledge.<br> Unlock Your Potential.
 				</h1>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
-				<p>
+			<div class="col-12">
+				<p class="w-50 w-75 description">
 					SkillExchange is a platform
 					where users can teach what they know and learn what they don't,
 					fostering a collaborative environment for skill-sharing and mutual
@@ -128,12 +129,11 @@
 				</p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col">
-				<button>
-					<a href="#start" class="btn btn-primary btn-lg me-3">Start Your Journey</a>
-				</button>
+		<div class="row w-75 mt-1 btns">
+			<div class="col-4 start-container">
+					<a href="#start" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
 			</div>
+<<<<<<< HEAD
 			<div class="col">
 				<button>
 					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
@@ -168,6 +168,10 @@
 			<div class="col">
 					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 				
+=======
+			<div class="col-8 mt-1">
+					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
+>>>>>>> branch 'master' of https://github.com/GokulLade/SkillExchangeProject.git
 			</div>
 		</div>
 		
