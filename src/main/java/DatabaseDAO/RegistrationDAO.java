@@ -17,14 +17,20 @@ public class RegistrationDAO {
 		Connection con = DatabaseConnection.getConnection();
 
 		try {
-			PreparedStatement ps = con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setString(1, ub.getFname());
 			ps.setString(2, ub.getLname());
 			ps.setString(3, ub.getUsername());
 			ps.setString(4, ub.getPass());
+			
+			//Default value 
 			ps.setString(5, ub.getEmail());
 			ps.setLong(6, ub.getPhno());
+			ps.setString(7, ub.getSkillToTeach());
+			ps.setString(8, ub.getSkillToLearn());
+			ps.setInt(9, ub.getRating());
+			ps.setBytes(10, new byte[0]); // For BLOB
 
 			k = ps.executeUpdate();
 

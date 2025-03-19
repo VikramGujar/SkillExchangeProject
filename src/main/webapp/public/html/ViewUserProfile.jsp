@@ -83,7 +83,7 @@
                 </div>
                 <div class="row text-center">
                 	<div class="col pt-2">
-                		<button class="btn mt-4 ">Update Profile</button>
+                		<a href="#"><button class="btn mt-4 ">Update Profile</button></a>
                 	</div>
                 </div>
                 <%

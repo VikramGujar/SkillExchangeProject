@@ -7,27 +7,13 @@ import java.io.Serializable;
 public class UserDataBean implements Serializable{
 	
 	//User properties
-	private String fname,lname,username,pass,email;
+	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
 	private long phno;
+	private int rating;
 	
-	public long getPhno() {
-		return phno;
-	}
-
-	public void setPhno(long phno) {
-		this.phno = phno;
-	}
-
+	//No-Para Constructor
 	public UserDataBean() {}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
+	
 	//Getter and Setter for get and set the data
 	public String getFname() {
 		return fname;
@@ -59,6 +45,46 @@ public class UserDataBean implements Serializable{
 
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+	
+	public String getSkillToTeach() {
+		return skillToTeach;
+	}
+
+	public void setSkillToTeach(String skillToTeach) {
+		this.skillToTeach = skillToTeach;
+	}
+
+	public String getSkillToLearn() {
+		return skillToLearn;
+	}
+
+	public void setSkillToLearn(String skillToLearn) {
+		this.skillToLearn = skillToLearn;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	public long getPhno() {
+		return phno;
+	}
+
+	public void setPhno(long phno) {
+		this.phno = phno;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }
