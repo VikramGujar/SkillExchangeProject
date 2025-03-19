@@ -21,13 +21,10 @@ public class UpdateUserProfileDao {
 				ub.setFname(rs.getString(1));
 				ub.setLname(rs.getString(2));
 				ub.setUsername(rs.getString(3));
-<<<<<<< HEAD
 				ub.setEmail(rs.getString(5));
 				ub.setPhno(rs.getLong(6));
-=======
 				ub.setEmail(rs.getString(5));//changes ac to database no
 				ub.setPhno(rs.getLong(6));//changes
->>>>>>> branch 'master' of https://github.com/GokulLade/SkillExchangeProject.git
 			}
 		}
 		catch(Exception e) {
