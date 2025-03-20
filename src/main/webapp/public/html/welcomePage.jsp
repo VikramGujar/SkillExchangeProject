@@ -131,7 +131,7 @@
 		</div>
 		<div class="row w-75 mt-1 btns">
 			<div class="col-4 start-container">
-					<a href="#start" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
+					<a href="startJourneyForm.html" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
 			</div>
 			<div class="col-8 mt-1">
 					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
