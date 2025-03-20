@@ -1,4 +1,4 @@
-<%@page import="javabean.UserDataBean"%>
+<%@ page import="javabean.UserDataBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -131,40 +131,8 @@
 		</div>
 		<div class="row w-75 mt-1 btns">
 			<div class="col-4 start-container">
-					<a href="startJourneyForm.html" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
+					<a href="#start" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
 			</div>
-			<div class="col">
-				<button>
-					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
-				</button>
-			</div>
-		</div>
-	</div>	
-	 <section class="home d-flex justify-content-center align-items-center">
-		<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<h1>
-					Share Your Knowledge. Unlock Your Potential.
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<p>
-					SkillExchange is a platform
-					where users can teach what they know and learn what they don't,
-					fostering a collaborative environment for skill-sharing and mutual
-					growth, with a focus on personal and professional development.
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-					<a href="startJourneyForm.html" class="btn  border-0 btn-start">Start Your Journey</a>
-			</div>
-			<div class="col">
-					<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			<div class="col-8 mt-1">
 					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
 			</div>
