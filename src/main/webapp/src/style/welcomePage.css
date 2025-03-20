@@ -204,7 +204,6 @@ h1.heading{
 	background-size: 200% auto;
 	-webkit-animation: pulse 2s infinite;
 	animation: pulse513 1.5s infinite;
-	
 }
 @keyframes pulse513 {
  0% {
