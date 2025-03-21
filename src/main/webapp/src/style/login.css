@@ -2,7 +2,7 @@
 /*--------------------------- Common style --------------------------------*/
 
 :root {
-	--btn-color: #FFC200;
+	--btn-color: #6F69E8;
 	--bg-color: #F9FAFC;
 	--txt-color: #222;
 	--txt-colorW: #fff;
@@ -10,7 +10,8 @@
 
 body {
 	font-family: 'Arial', sans-serif;
-	background-color: var(--bg-color);
+	background: url("https://images.unsplash.com/photo-1560265036-021b3652b490?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	background-position : 60% 20%;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -18,6 +19,42 @@ body {
 	align-items: center;
 	height: 100vh;
 }
+
+
+
+button, .btn{
+ border: none;
+ color: #fff;
+ background-image: linear-gradient(30deg, #6F69E8, #332F80);
+ border-radius: 20px;
+ background-size: 100% auto;
+ font-family: inherit;
+ font-size: 17px;
+ padding: 0.6em 1.5em;
+}
+
+.btn:hover{
+   background-position: right center;
+   background-size: 200% auto;
+   -webkit-animation: pulse 2s infinite;
+   animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #05bada66;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
+
+
 
 /*-------------------------- Login page style -----------------------------------*/
 .login-container {
@@ -69,21 +106,6 @@ h2 {
 	border-color: var(--btn-color);
 }
 
-.btn-login {
-	background-color: var(--btn-color);
-	color: var(--txt-colorW);
-	padding: 1rem;
-	font-size: 1.1rem;
-	width: 100%;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-}
-
-.btn-login:hover {
-	background-color: #ffb300;
-}
 
 .create-account {
 	margin-top: 1rem;
