@@ -99,7 +99,7 @@
 							<a class="nav-link" href="#">Settings</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="#">Help</a></li>
-						<li><a class=" btn btn-outline-danger" href="#">Logout</a></li>
+						<li><a class=" btn btn-outline-danger" href="logout">Logout</a></li>
 					</ul>
 				</div>
 			</div>
