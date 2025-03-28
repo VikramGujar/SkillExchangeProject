@@ -4,19 +4,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to SkillExchange</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-	rel="stylesheet" />
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
-<link rel="stylesheet" href="../../src/style/welcomePage.css" />
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to SkillExchange</title>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+		rel="stylesheet" />
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="../../src/style/welcomePage.css" />
+	
+	
+	    <!-- React Library -->
+	    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	
+	    <!-- Compiler Library -->
+	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	
 </head>
 <body>
 
@@ -79,8 +87,8 @@
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 						Hi,
 						<%
-					out.println(ub.getUsername());
-					%>
+							out.println(ub.getUsername());
+						%>
 					</h5>
 				</div>
 				<div class="offcanvas-body">
@@ -129,15 +137,38 @@
 				</p>
 			</div>
 		</div>
+		<%
+			out.println(ub.getSkillToLearn());
+							
+			String userAction = null;
+			if(ub.getSkillToLearn()==null)
+			{
+				userAction = "../../../showAllUsers";
+			}
+			else{
+				userAction = "startJourneyForm.html";
+			}				
+		%>
+				
+		<form action=<%= userAction %> method="post" class="row w-75 mt-1 btns">
+			<div class="col-4 start-container">
+					<input type="submit" value="Start Your Journey" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1" />
+			</div>
+			<div class="col-8 mt-1">
+					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
+			</div>
+		</form>
+		
+		<!-- 
 		<div class="row w-75 mt-1 btns">
 			<div class="col-4 start-container">
-					<a href="startJourneyForm.html" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
+					<a href="coonnectToUsers.html" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
 			</div>
 			<div class="col-8 mt-1">
 					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
 			</div>
 		</div>
-		
+		 -->
 		
 			<!-- 
 			<h1 class="slogun">Share Your Knowledge. Unlock Your Potential.</h1>
@@ -153,13 +184,23 @@
 		</div>
 	</section>
 
-
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
-
+	
+	
+	<!-- React Application Library -->
+    <script type="text/babel">
+		funtion FormForButtons(){
+			return (
+			
+			);
+		}
+	</script>
+    <noscript>Please enable JavaScript on your browser.</noscript>
+	
 </body>
 </html>
