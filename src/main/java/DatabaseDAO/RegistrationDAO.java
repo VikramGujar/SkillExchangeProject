@@ -17,6 +17,7 @@ public class RegistrationDAO {
 		Connection con = DatabaseConnection.getConnection();
 
 		try {
+			
 			PreparedStatement ps = con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setString(1, ub.getFname());
