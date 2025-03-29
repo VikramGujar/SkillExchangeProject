@@ -28,7 +28,7 @@ public class ViewAllUsersServlet extends HttpServlet{
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
 		{
-			System.err.println("ViewAllUsersServlet.doGet()");
+			System.err.println("ViewAllUsersServlet.doPos	t()");
 			try {
 				System.out.println(vaud.viewAllUsers());	
 				//Forwarding request and response
@@ -37,5 +37,12 @@ public class ViewAllUsersServlet extends HttpServlet{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+		@Override
+		protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
+		{
+			System.out.println("ViewAllUsersServlet.doGet()");
+			
+			doPost(req, res);
 		}
 }

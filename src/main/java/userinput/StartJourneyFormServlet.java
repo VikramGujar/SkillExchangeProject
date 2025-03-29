@@ -62,5 +62,14 @@ public class StartJourneyFormServlet extends HttpServlet {
 			System.out.println("Data Not Updated in Database");
 		}
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
+	{
+		doGet(req, res);
+	}
+	
+	
+	
 
 }
