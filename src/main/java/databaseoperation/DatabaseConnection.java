@@ -11,7 +11,7 @@ public class DatabaseConnection {
 	private DatabaseConnection() {};
 	
 	static {
-		
+		System.out.println("DatabaseConnection.enclosing_method()");
 		try {
 			
 			// Class Loading
@@ -29,6 +29,7 @@ public class DatabaseConnection {
 	// Method For Returning Object of Connection
 	public static Connection getConnection()
 	{
+		System.out.println("con : "+con);
 		return con;
 	}
 }

@@ -7,10 +7,18 @@ import java.io.Serializable;
 public class UserDataBean implements Serializable{
 	
 	//User properties
-	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
+	private String fname,lname,username,pass,email,skillToTeach,skillToLearn, profilePic;
 	private long phno;
 	private int rating;
 	
+	public String getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
+
 	//No-Para Constructor
 	public UserDataBean() {}
 	
