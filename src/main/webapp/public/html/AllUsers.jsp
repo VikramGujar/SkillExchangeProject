@@ -7,6 +7,6 @@
 		<title>All User</title>
 	</head>
 	<body>
-	
+		<h1>All users will be here</h1>
 	</body>
 </html>
