@@ -32,7 +32,7 @@ public class ViewAllUsersServlet extends HttpServlet{
 			try {
 				System.out.println(vaud.viewAllUsers());	
 				//Forwarding request and response
-				req.getRequestDispatcher("AllUsers.jsp").forward(req, res);
+				req.getRequestDispatcher("public/html/AllUsers.jsp").forward(req, res);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
