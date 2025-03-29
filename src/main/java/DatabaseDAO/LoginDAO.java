@@ -15,12 +15,10 @@ public class LoginDAO {
 	{
 		UserDataBean ub=null;
 		Connection con=null;
-		System.out.println("LoginDAO.checkLogin()");
 		
 		try
 		{
 			con=DatabaseConnection.getConnection();
-			System.out.println("LoginDAO.checkLogin() con : "+con);
 			PreparedStatement ps=con.prepareStatement("Select * from skillexchangeusers Where username=? AND password=?");
 			
 			ps.setString(1, usename);
@@ -37,17 +35,12 @@ public class LoginDAO {
 				ub.setLname(rs.getString(2));
 				ub.setUsername(rs.getString(3));
 				ub.setPass(rs.getString(4));
-				System.out.println("Login DAO Start");
-				System.out.println(rs.getString(5));
-				System.out.println("Login DAO end");
-//				ub.setEmail(rs.getString(5));
-//				ub.setPhno(rs.getLong(6));
 				
+				System.out.println("User Email"+ rs.getString(5));
 			}
 		}
 		catch(Exception e)
 		{
-			System.out.println("Inside else con : "+con);
 			e.printStackTrace();
 		}
 		
