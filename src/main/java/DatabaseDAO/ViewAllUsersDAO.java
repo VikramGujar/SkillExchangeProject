@@ -35,7 +35,8 @@ public class ViewAllUsersDAO {
 			udb.setSkillToTeach(rs.getString(7));
 			udb.setSkillToLearn(rs.getString(8));
 			udb.setRating(rs.getInt(9));
-			udb.setProfilePic(rs.getString(10));
+			// keeping this empty for #G
+//			udb.setProfilePic(rs.getString(10));
 			allUsers.add(udb);
 		} 
 		return allUsers;
