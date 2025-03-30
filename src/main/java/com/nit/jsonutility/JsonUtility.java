@@ -1,5 +1,6 @@
 package com.nit.jsonutility;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -18,8 +19,16 @@ public class JsonUtility {
 	public static String convertJavaToJson(ArrayList<UserDataBean> obj){
 		System.out.println("JsonUtility.convertJavaToJson()");
 		String jsonRes = "";
+		
 		try {
+			// writing all users from db to a String 
 			jsonRes = objMapper.writeValueAsString(obj);
+			
+			// Writing ArrayList into .json file
+			// Note : everyone change the .json file path as per your system & while testing it call me.
+			objMapper.writeValue(new File("C:\\Users\\namra\\git\\SkillExchangeProject\\AllUsersData.json"), obj);
+			System.out.println("Users data written into .json file");
+		
 		} catch(JsonGenerationException e) {
 			System.out.println("Exception occured while converting java obj into json : "+e.getMessage());
 			e.printStackTrace();
@@ -30,6 +39,7 @@ public class JsonUtility {
 			System.out.println("Exception occured while converting java obj into json : "+e.getMessage());
 			e.printStackTrace();
 		}
+		
 		return jsonRes;
 	}
 	

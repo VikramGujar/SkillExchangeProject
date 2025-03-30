@@ -1,5 +1,6 @@
 package userinput;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -34,12 +35,25 @@ public class ViewAllUsersServlet extends HttpServlet{
 		{
 			System.out.println("ViewAllUsersServlet.doPost()");
 			try {
-				
+				 // converting AllUsers(db data) data to ArrayList
 				 ArrayList<UserDataBean> allUsers =  vaud.viewAllUsers();
+				 
+				 // converting ArrayList<UserDataBean> data to Json Data(in the from of String) 
 				 String jsonData = JsonUtility.convertJavaToJson(allUsers);
-				 System.out.println("Json Data :: "+jsonData);
+				 
+				 // converting json string to .json file 
+				 try(FileInputStream fis = new FileInputStream("AllUsersData.json")){
+						int bytes;
+						System.out.print("Student data : ");
+						while((bytes = fis.read())!= -1) {
+							System.out.print((char)bytes);
+						}
+					}
+					catch(IOException i) {
+						i.printStackTrace();
+					}
 				 //Creating new session
-				HttpSession hs=req.getSession();
+				 HttpSession hs=req.getSession();
 				
 				//User bean adding to session
 				hs.setAttribute("allUser", allUsers);
