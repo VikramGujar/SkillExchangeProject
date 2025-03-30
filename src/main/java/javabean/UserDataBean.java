@@ -11,6 +11,23 @@ public class UserDataBean implements Serializable{
 	private long phno;
 	private int rating;
 
+	//No-Para Constructor
+	public UserDataBean() { }
+	
+	public UserDataBean(String fname, String lname, String username, String pass, String email, String skillToTeach,
+			String skillToLearn, String profilePic, long phno, int rating) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.username = username;
+		this.pass = pass;
+		this.email = email;
+		this.skillToTeach = skillToTeach;
+		this.skillToLearn = skillToLearn;
+		this.profilePic = profilePic;
+		this.phno = phno;
+		this.rating = rating;
+	}
 
 	public String getProfilePic() {
 		return profilePic;
@@ -20,8 +37,6 @@ public class UserDataBean implements Serializable{
 		this.profilePic = profilePic;
 	}
 
-	//No-Para Constructor
-	public UserDataBean() {}
 	
 	//Getter and Setter for get and set the data
 	public String getFname() {
