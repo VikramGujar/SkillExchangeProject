@@ -10,7 +10,8 @@ public class UserDataBean implements Serializable{
 	private String fname,lname,username,pass,email,skillToTeach,skillToLearn, profilePic;
 	private long phno;
 	private int rating;
-	
+
+
 	public String getProfilePic() {
 		return profilePic;
 	}
@@ -95,4 +96,10 @@ public class UserDataBean implements Serializable{
 		this.email = email;
 	}
 	
+	@Override
+	public String toString() {
+		return "UserDataBean [fname=" + fname + ", lname=" + lname + ", username=" + username + ", pass=" + pass
+				+ ", email=" + email + ", skillToTeach=" + skillToTeach + ", skillToLearn=" + skillToLearn
+				+ ", profilePic=" + profilePic + ", phno=" + phno + ", rating=" + rating + "]";
+	}
 }

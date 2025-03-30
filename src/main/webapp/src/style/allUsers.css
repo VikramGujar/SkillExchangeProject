@@ -1,0 +1,39 @@
+
+/*------------------------------- Nav Section start -------------------------*/
+.navbar-brand{
+}
+.logo{
+	width: 125px;
+}
+.logo a img{
+	width: 125px;
+}
+ .social-icons{
+	position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate( -50%, -50% );
+}
+.social-icons a{
+	text-decoration: none;
+	transition : 1s;
+	border-radius: 100px;
+}
+.social-icons a:hover{
+	
+}
+.social-icons a img{
+	width: 20px;
+	margin: 1px;
+}
+.notification-icon a img{
+	width: 20px;
+	cursor: pointer;
+}
+
+.menu-icon{
+	width: 100%;
+	max-width: 100px;	
+}
+
+/*-------------------------------- Nav Section end --------------------------*/

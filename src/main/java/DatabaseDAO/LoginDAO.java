@@ -41,7 +41,6 @@ public class LoginDAO {
 				ub.setSkillToLearn(rs.getString(8));
 				ub.setRating(rs.getInt(9));
 //				ub.setProfilePic(rs.getString(10));
-				System.out.println("LoginDAO.checkLogin() - All data Transfered.");
 			}
 		}
 		catch(Exception e)
