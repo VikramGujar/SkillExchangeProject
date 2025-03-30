@@ -40,8 +40,8 @@ public class LoginDAO {
 				ub.setSkillToTeach(rs.getString(7));
 				ub.setSkillToLearn(rs.getString(8));
 				ub.setRating(rs.getInt(9));
-				ub.setProfilePic(rs.getString(10));
-				System.out.println("User Email"+ rs.getString(5));
+//				ub.setProfilePic(rs.getString(10));
+				System.out.println("LoginDAO.checkLogin() - All data Transfered.");
 			}
 		}
 		catch(Exception e)
