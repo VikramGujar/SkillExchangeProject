@@ -4,21 +4,21 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import databaseoperation.DatabaseConnection;
 import javabean.UserDataBean;
 
 public class ViewAllUsersDAO {
 	
-	private Set<UserDataBean> allUsers;
+	private ArrayList<UserDataBean> allUsers;
 
 	public ViewAllUsersDAO() {
-		allUsers = new HashSet<>();
+		allUsers = new ArrayList<>();
 	}
 	
-	public Set<UserDataBean> viewAllUsers() throws SQLException{
+	public ArrayList<UserDataBean> viewAllUsers() throws SQLException{
 		
 		Connection con = DatabaseConnection.getConnection();
 		
@@ -35,7 +35,8 @@ public class ViewAllUsersDAO {
 			udb.setSkillToTeach(rs.getString(7));
 			udb.setSkillToLearn(rs.getString(8));
 			udb.setRating(rs.getInt(9));
-			udb.setProfilePic(rs.getString(10));
+			// keeping this empty for #G
+//			udb.setProfilePic(rs.getString(10));
 			allUsers.add(udb);
 		} 
 		return allUsers;

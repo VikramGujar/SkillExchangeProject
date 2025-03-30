@@ -1,7 +1,11 @@
 package userinput;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.nit.jsonutility.JsonUtility;
 
 import DatabaseDAO.ViewAllUsersDAO;
 import jakarta.servlet.ServletException;
@@ -9,6 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import javabean.UserDataBean;
 
 
@@ -28,14 +33,31 @@ public class ViewAllUsersServlet extends HttpServlet{
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
 		{
-			System.err.println("ViewAllUsersServlet.doGet()");
+			System.out.println("ViewAllUsersServlet.doPost()");
 			try {
-				System.out.println(vaud.viewAllUsers());	
+				 // converting AllUsers(db data) data to ArrayList
+				 ArrayList<UserDataBean> allUsers =  vaud.viewAllUsers();
+				 
+				 // converting ArrayList<UserDataBean> data to Json Data(in the from of String) 
+				 String jsonData = JsonUtility.convertJavaToJson(allUsers);
+				 
+				 //Creating new session
+				 HttpSession hs=req.getSession();
+				
+				//User bean adding to session
+				hs.setAttribute("allUser", allUsers);
 				//Forwarding request and response
-				req.getRequestDispatcher("AllUsers.jsp").forward(req, res);
+				req.getRequestDispatcher("public/html/allUsers.jsp").forward(req, res);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+		@Override
+		protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
+		{
+			System.out.println("ViewAllUsersServlet.doGet()");
+			
+			doPost(req, res);
 		}
 }

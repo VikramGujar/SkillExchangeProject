@@ -138,16 +138,9 @@
 			</div>
 		</div>
 		<%
-			out.println(ub.getSkillToLearn());
+			// out.println(ub.getSkillToLearn());
 							
-			String userAction = null;
-			if(ub.getSkillToLearn()==null)
-			{
-				userAction = "../../../showAllUsers";
-			}
-			else{
-				userAction = "startJourneyForm.html";
-			}				
+			String userAction = ub.getSkillToLearn()==null?"startJourneyForm.html":"../../showAllUsers" ;
 		%>
 				
 		<form action=<%= userAction %> method="post" class="row w-75 mt-1 btns">
