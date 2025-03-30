@@ -41,17 +41,6 @@ public class ViewAllUsersServlet extends HttpServlet{
 				 // converting ArrayList<UserDataBean> data to Json Data(in the from of String) 
 				 String jsonData = JsonUtility.convertJavaToJson(allUsers);
 				 
-				 // converting json string to .json file 
-				 try(FileInputStream fis = new FileInputStream("AllUsersData.json")){
-						int bytes;
-						System.out.print("Student data : ");
-						while((bytes = fis.read())!= -1) {
-							System.out.print((char)bytes);
-						}
-					}
-					catch(IOException i) {
-						i.printStackTrace();
-					}
 				 //Creating new session
 				 HttpSession hs=req.getSession();
 				
