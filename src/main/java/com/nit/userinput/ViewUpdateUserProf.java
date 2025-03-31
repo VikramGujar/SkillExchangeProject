@@ -1,16 +1,17 @@
-package userinput;
+package com.nit.userinput;
 
 
 	import java.io.IOException;
 	import java.util.ArrayList;
 
-	import DatabaseDAO.ViewUserProfileDAO;
-	import jakarta.servlet.ServletException;
+import com.nit.databasedao.ViewUserProfileDAO;
+import com.nit.javabean.UserDataBean;
+
+import jakarta.servlet.ServletException;
 	import jakarta.servlet.annotation.WebServlet;
 	import jakarta.servlet.http.HttpServlet;
 	import jakarta.servlet.http.HttpServletRequest;
 	import jakarta.servlet.http.HttpServletResponse;
-	import javabean.UserDataBean;
 
 	@SuppressWarnings("serial")
 	@WebServlet("/viewEditUserPro")
