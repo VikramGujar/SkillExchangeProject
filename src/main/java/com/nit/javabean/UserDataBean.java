@@ -1,4 +1,4 @@
-package javabean;
+package com.nit.javabean;
 
 //JavaBean Class for data storing and getting 
 import java.io.Serializable;

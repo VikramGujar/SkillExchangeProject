@@ -1,4 +1,4 @@
-package databaseoperation;
+package com.nit.databaseoperation;
 
 //Creating class which will provide the Connection interface Object
 import java.sql.Connection;

@@ -1,6 +1,9 @@
 /*------------------------------- Nav Section start -------------------------*/
-nav{
-	background: red;
+body{
+	background-color: pink !important;
+}
+.navbar{
+	background: red !important;
 }
 .navbar-brand{
 }

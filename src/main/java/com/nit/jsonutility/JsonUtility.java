@@ -9,7 +9,7 @@ import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import javabean.UserDataBean;
+import com.nit.javabean.UserDataBean;
 
 public class JsonUtility {
 	private static ObjectMapper objMapper;
