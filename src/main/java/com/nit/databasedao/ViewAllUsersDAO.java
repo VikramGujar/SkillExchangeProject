@@ -1,4 +1,4 @@
-package DatabaseDAO;
+package com.nit.databasedao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import databaseoperation.DatabaseConnection;
-import javabean.UserDataBean;
+import com.nit.databaseoperation.DatabaseConnection;
+import com.nit.javabean.UserDataBean;
 
 public class ViewAllUsersDAO {
 	
