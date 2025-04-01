@@ -47,7 +47,7 @@ public class ViewAllUsersServlet extends HttpServlet{
 				//User bean adding to session
 				hs.setAttribute("allUser", allUsers);
 				//Forwarding request and response
-				req.getRequestDispatcher("public/html/allUsers.jsp").forward(req, res);
+				req.getRequestDispatcher("allUsers.jsp").forward(req, res);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

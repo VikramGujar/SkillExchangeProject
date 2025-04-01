@@ -27,7 +27,8 @@ public class EditUserProfile extends HttpServlet {
 				req.getRequestDispatcher("/public/html/WelcomePage.jsp").forward(req, resp);
 				return;
 			}
-			if (ub == null) {
+			if (ub == null) 
+			{
 				req.setAttribute("msg", "User Data Not Found");
 				System.out.println("ub is null: " + ub);
 				req.getRequestDispatcher("/public/html/WelcomePage.jsp").forward(req, resp);
