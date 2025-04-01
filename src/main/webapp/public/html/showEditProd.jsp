@@ -87,6 +87,15 @@
 								name="phno" id="phno" value="<%=msg.getPhno()%>">
 						</div>
 					</div>
+					<div class="row px-3 py-1.1 mt-1">
+						<div class="col-4">
+							<label class="fs-4">Profile Picture</label>
+						</div>
+						<div class="col-8">
+							<input class="w-100 px-2 py-1 fs-5 border"
+								type="file" name="profilePic" accept="image/*"  required>
+						</div>
+					</div>
 					<div class="row text-center">
 						<div class="col pt-2">
 							<input type="submit" class="btn mt-4 " value="Update Profile">
