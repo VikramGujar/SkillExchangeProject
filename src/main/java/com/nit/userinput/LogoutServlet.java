@@ -1,4 +1,4 @@
-package userinput;
+package com.nit.userinput;
 
 
 import java.io.IOException;

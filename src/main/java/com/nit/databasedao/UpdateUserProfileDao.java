@@ -1,11 +1,11 @@
-package DatabaseDAO;
+package com.nit.databasedao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import databaseoperation.DatabaseConnection;
-import javabean.UserDataBean;
+import com.nit.databaseoperation.DatabaseConnection;
+import com.nit.javabean.UserDataBean;
 
 public class UpdateUserProfileDao {
 //it will show the information for updation

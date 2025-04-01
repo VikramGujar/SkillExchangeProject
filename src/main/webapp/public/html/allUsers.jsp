@@ -1,4 +1,4 @@
-<%@ page import="javabean.UserDataBean"%>
+<%@ page import="com.nit.javabean.UserDataBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,9 +23,25 @@
 	
 	    <!-- Compiler Library -->
 	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-	
+		
+		<!-- React Application Library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.0/babel.min.js"></script>
+		<script type="text/babel">
+    	function FormForButtons() {
+        	return (
+           	 <div>
+                <button>Click Me</button>
+           	 </div>
+        	);
+   		}    
+    	ReactDOM.render(<FormForButtons />, document.getElementById("root"));
+	</script>
+
 	</head>
-	<body>
+	<body>    
+	<noscript>Please enable JavaScript on your browser.</noscript>
+	
+	
 	<!--------------------------------- Nav Section start------------------------------------------------->
 	<nav class="navbar fixed-top">
 		<div class="container-fluid">
@@ -58,15 +74,6 @@
 	
 	
 	
-	<!-- React Application Library -->
-    <script type="text/babel">
-		funtion FormForButtons(){
-			return (
-			
-			);
-		}
-	</script>
-    <noscript>Please enable JavaScript on your browser.</noscript>
 	
-	</body>
+</body>
 </html>

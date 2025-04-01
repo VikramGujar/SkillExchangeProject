@@ -1,8 +1,10 @@
-package userinput;
+package com.nit.userinput;
 
 import java.io.IOException;
 
-import DatabaseDAO.LoginDAO;
+import com.nit.databasedao.LoginDAO;
+import com.nit.javabean.UserDataBean;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,7 +12,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import javabean.UserDataBean;
 
 @SuppressWarnings("serial")
 
