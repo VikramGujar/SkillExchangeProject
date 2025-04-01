@@ -8,13 +8,22 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 10.1/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HP/Downloads/jackson-core-asl-1.9.13.jar">
+=======
+	<classpathentry kind="lib" path="C:/Tomcat 10.1/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/91762/Downloads/jackson-core-asl-1.9.13.jar">
+>>>>>>> ce500aac4b86de14abc6530c5acdcc8ddb0e9b70
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/HP/Downloads/jackson-mapper-asl-1.9.13.jar">
+=======
+	<classpathentry kind="lib" path="C:/Users/91762/Downloads/jackson-mapper-asl-1.9.13.jar">
+>>>>>>> ce500aac4b86de14abc6530c5acdcc8ddb0e9b70
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
