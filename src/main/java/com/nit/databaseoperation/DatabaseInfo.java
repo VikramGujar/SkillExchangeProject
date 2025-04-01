@@ -1,4 +1,4 @@
-package databaseoperation;
+package com.nit.databaseoperation;
 
 //Interface for Database information
 public interface DatabaseInfo {

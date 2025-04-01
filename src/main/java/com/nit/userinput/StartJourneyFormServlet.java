@@ -1,15 +1,16 @@
-package userinput;
+package com.nit.userinput;
 
 import java.io.IOException;
 
-import DatabaseDAO.StartJourneyFormDAO;
+import com.nit.databasedao.StartJourneyFormDAO;
+import com.nit.javabean.UserDataBean;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import javabean.UserDataBean;
 
 @WebServlet("/startJourneyForm")
 public class StartJourneyFormServlet extends HttpServlet {
