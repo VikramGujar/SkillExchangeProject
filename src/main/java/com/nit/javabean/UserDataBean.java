@@ -1,5 +1,6 @@
 package com.nit.javabean;
 
+import java.io.InputStream;
 //JavaBean Class for data storing and getting 
 import java.io.Serializable;
 
@@ -7,15 +8,16 @@ import java.io.Serializable;
 public class UserDataBean implements Serializable{
 	
 	//User properties
-	private String fname,lname,username,pass,email,skillToTeach,skillToLearn, profilePic;
+	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
 	private long phno;
 	private int rating;
+	private InputStream profilePic;
 
 	//No-Para Constructor
 	public UserDataBean() { }
 	
 	public UserDataBean(String fname, String lname, String username, String pass, String email, String skillToTeach,
-			String skillToLearn, String profilePic, long phno, int rating) {
+			String skillToLearn, InputStream profilePic, long phno, int rating) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
@@ -29,12 +31,12 @@ public class UserDataBean implements Serializable{
 		this.rating = rating;
 	}
 
-	public String getProfilePic() {
+	public InputStream getProfilePic() {
 		return profilePic;
 	}
 
-	public void setProfilePic(String profilePic) {
-		this.profilePic = profilePic;
+	public void setProfilePic(InputStream inputStream) {
+		this.profilePic = inputStream;
 	}
 
 	

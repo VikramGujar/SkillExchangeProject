@@ -26,11 +26,14 @@ public class JsonUtility {
 			
 			// Writing ArrayList into .json file
 			// Note : everyone change the .json file path as per your system & while testing it call me.
-<<<<<<< HEAD
+
 			objMapper.writeValue(new File("C:\\Users\\HP\\git\\SkillExchangeProject\\AllUsersData.json"), obj);
-=======
+
 			objMapper.writeValue(new File("C:\\Users\\91762\\git\\SkillExchangeProject\\AllUsersData.json"), obj);
->>>>>>> ce500aac4b86de14abc6530c5acdcc8ddb0e9b70
+
+
+			objMapper.writeValue(new File("C:\\Users\\vikra\\git\\SkillExchangeProject\\AllUsersData.json"), obj);
+
 			System.out.println("Users data written into .json file");
 		
 		} catch(JsonGenerationException e) {
