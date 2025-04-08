@@ -17,6 +17,7 @@ import javabean.UserDataBean;
 @WebServlet("/public/html/login")
 public class LoginServlet extends HttpServlet{
 
+	
 	//Creating reference variable for Class
 	LoginDAO ld=null;
 	
