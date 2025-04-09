@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
+		System.out.println("LoginServlet.doPost(started...)");
 		//Getting data from HTML form
 		String username=req.getParameter("username");
 		String password=req.getParameter("password");
@@ -43,6 +44,7 @@ public class LoginServlet extends HttpServlet{
 		//Checking data is present or not in DB
 		if(ub!=null)
 		{
+			System.out.println("LoginServlet.doPost(inside If block)");
 			//Accessing ServletContext object reference
 			ServletContext sct = req.getServletContext();
 			sct.setAttribute("ubean", ub);
@@ -58,6 +60,7 @@ public class LoginServlet extends HttpServlet{
 		}
 		else
 		{
+			System.out.println("LoginServlet.doPost(inside else block)");
 			req.setAttribute("msg","<div class='login-fail'>Oops! Check your username or password.</div>");
 			req.getRequestDispatcher("userlogin.jsp").forward(req, res);
 		}
