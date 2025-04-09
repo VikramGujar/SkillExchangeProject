@@ -5,16 +5,18 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.nit.databasedao.ViewAllUsersDAO;
+import com.nit.javabean.UserDataBean;
 import com.nit.jsonutility.JsonUtility;
 
-import DatabaseDAO.ViewAllUsersDAO;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import javabean.UserDataBean;
+
 
 
 @SuppressWarnings("serial")
