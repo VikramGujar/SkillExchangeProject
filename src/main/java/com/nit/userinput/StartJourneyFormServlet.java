@@ -1,17 +1,18 @@
-package userinput;
+package com.nit.userinput;
 
 import java.io.IOException;
 
-import DatabaseDAO.StartJourneyFormDAO;
+import com.nit.databasedao.StartJourneyFormDAO;
+import com.nit.javabean.UserDataBean;
+
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import javabean.UserDataBean;
 
-@WebServlet("/public/html/startJourneyForm")
+@WebServlet("/startJourneyForm")
 public class StartJourneyFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -29,8 +30,10 @@ public class StartJourneyFormServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
 	{
+		System.out.println("StartJourneyFormServlet.doPost()");
+		
 		//Setting data into UserBean
 		ub.setPhno(Long.parseLong(req.getParameter("phoneNumber")));
 		ub.setEmail(req.getParameter("email"));
@@ -45,7 +48,6 @@ public class StartJourneyFormServlet extends HttpServlet {
 		
         //Setting the username in UserDataBean
         ub.setUsername(ub1.getUsername());
-
 		
 		//Storing into DAO and getting result
 		int result=sjf.storeData(ub);
@@ -54,11 +56,21 @@ public class StartJourneyFormServlet extends HttpServlet {
 		if (result > 0) 
 		{
 			System.out.println("Data Updated in Database");
+			res.sendRedirect("showAllUsers");
 		} 
 		else 
 		{
 			System.out.println("Data Not Updated in Database");
 		}
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
+	{
+		doGet(req, res);
+	}
+	
+	
+	
 
 }

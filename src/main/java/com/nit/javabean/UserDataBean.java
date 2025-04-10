@@ -1,4 +1,4 @@
-package javabean;
+package com.nit.javabean;
 
 //JavaBean Class for data storing and getting 
 import java.io.Serializable;
@@ -7,12 +7,36 @@ import java.io.Serializable;
 public class UserDataBean implements Serializable{
 	
 	//User properties
-	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
+	private String fname,lname,username,pass,email,skillToTeach,skillToLearn, profilePic;
 	private long phno;
 	private int rating;
-	
+
 	//No-Para Constructor
-	public UserDataBean() {}
+	public UserDataBean() { }
+	
+	public UserDataBean(String fname, String lname, String username, String pass, String email, String skillToTeach,
+			String skillToLearn, String profilePic, long phno, int rating) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.username = username;
+		this.pass = pass;
+		this.email = email;
+		this.skillToTeach = skillToTeach;
+		this.skillToLearn = skillToLearn;
+		this.profilePic = profilePic;
+		this.phno = phno;
+		this.rating = rating;
+	}
+
+	public String getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		this.profilePic = profilePic;
+	}
+
 	
 	//Getter and Setter for get and set the data
 	public String getFname() {
@@ -87,4 +111,10 @@ public class UserDataBean implements Serializable{
 		this.email = email;
 	}
 	
+	@Override
+	public String toString() {
+		return "UserDataBean [fname=" + fname + ", lname=" + lname + ", username=" + username + ", pass=" + pass
+				+ ", email=" + email + ", skillToTeach=" + skillToTeach + ", skillToLearn=" + skillToLearn
+				+ ", profilePic=" + profilePic + ", phno=" + phno + ", rating=" + rating + "]";
+	}
 }

@@ -1,11 +1,11 @@
-package DatabaseDAO;
+package com.nit.databasedao;
 
 //Performing Registration process Storing the User Data in Database
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import databaseoperation.DatabaseConnection;
-import javabean.UserDataBean;
+import com.nit.databaseoperation.DatabaseConnection;
+import com.nit.javabean.UserDataBean;
 
 public class RegistrationDAO {
 
@@ -17,6 +17,7 @@ public class RegistrationDAO {
 		Connection con = DatabaseConnection.getConnection();
 
 		try {
+			
 			PreparedStatement ps = con.prepareStatement("Insert into skillExchangeusers values(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setString(1, ub.getFname());

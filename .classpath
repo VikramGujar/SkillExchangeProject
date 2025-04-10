@@ -8,6 +8,12 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Tomcat 10.1/lib/servlet-api.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/vikra/Downloads/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/vikra/Downloads/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 10.1/lib/servlet-api.jar"/>
+>>>>>>> 9022934bbbb1fa5dfe241dac4a25edd6b422f26d
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

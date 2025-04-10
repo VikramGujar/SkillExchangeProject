@@ -1,12 +1,12 @@
-package DatabaseDAO;
+package com.nit.databasedao;
 
 //Checking user data in database and if it is present then returning the UserDataBean object 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import databaseoperation.DatabaseConnection;
-import javabean.UserDataBean;
+import com.nit.databaseoperation.DatabaseConnection;
+import com.nit.javabean.UserDataBean;
 
 public class LoginDAO {
 	
@@ -15,11 +15,10 @@ public class LoginDAO {
 	{
 		UserDataBean ub=null;
 		Connection con=null;
-
+		
 		try
 		{
 			con=DatabaseConnection.getConnection();
-	
 			PreparedStatement ps=con.prepareStatement("Select * from skillexchangeusers Where username=? AND password=?");
 			
 			ps.setString(1, usename);
@@ -38,11 +37,14 @@ public class LoginDAO {
 				ub.setPass(rs.getString(4));
 				ub.setEmail(rs.getString(5));
 				ub.setPhno(rs.getLong(6));
+				ub.setSkillToTeach(rs.getString(7));
+				ub.setSkillToLearn(rs.getString(8));
+				ub.setRating(rs.getInt(9));
+//				ub.setProfilePic(rs.getString(10));
 			}
 		}
 		catch(Exception e)
 		{
-			System.out.println(con);
 			e.printStackTrace();
 		}
 		

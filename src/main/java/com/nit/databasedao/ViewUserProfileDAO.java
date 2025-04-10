@@ -1,4 +1,4 @@
-package DatabaseDAO;
+package com.nit.databasedao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,16 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import databaseoperation.DatabaseConnection;
-import javabean.UserDataBean;
+import com.nit.databaseoperation.DatabaseConnection;
+import com.nit.javabean.UserDataBean;
 
 public class ViewUserProfileDAO {
 
 	public ArrayList<UserDataBean> viewProfile(String username) throws SQLException {
 		ArrayList<UserDataBean> list = new ArrayList<UserDataBean>();
 		UserDataBean ub = null;
-
-
 		
 		try {
 			Connection con2 = DatabaseConnection.getConnection();
