@@ -18,6 +18,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/public/html/login")
 public class LoginServlet extends HttpServlet{
 
+	
 	//Creating reference variable for Class
 	LoginDAO ld=null;
 	
