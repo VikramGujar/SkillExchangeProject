@@ -1,5 +1,6 @@
 package javabean;
 
+import java.io.InputStream;
 //JavaBean Class for data storing and getting 
 import java.io.Serializable;
 
@@ -10,7 +11,9 @@ public class UserDataBean implements Serializable{
 	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
 	private long phno;
 	private int rating;
+	private InputStream image;
 	
+
 	//No-Para Constructor
 	public UserDataBean() {}
 	
@@ -85,6 +88,14 @@ public class UserDataBean implements Serializable{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public InputStream getImage() {
+		return image;
+	}
+
+	public void setImage(InputStream image) {
+		this.image = image;
 	}
 	
 }

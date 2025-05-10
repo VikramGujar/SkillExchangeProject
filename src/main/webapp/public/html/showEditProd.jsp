@@ -38,66 +38,79 @@
 
 			<!-- <h1>Update User</h1> -->
 
-			<form action="update" method="Get">
+			<form action="update" method="post" enctype="multipart/form-data">
 				<div class="row px-3 py-1.1 mt-1">
-                    <div class="col-4">
-						<label class="fs-4">First Name</label> 
-						</div>
-						<div class="col-8">
+					<div class="col-4">
+						<label class="fs-4">First Name</label>
+					</div>
+					<div class="col-8">
 						<input type="text" class="w-100 px-2 py-1 fs-5 border"
 							class="w-100 px-2 py-1 fs-5 border" name="fname"
 							value="<%=msg.getFname()%>">
-							</div>
 					</div>
-					<div class="row px-3 py-1.1 mt-1">
-						<div class="col-4">
-							<label class="fs-4">LastName</label>
-						</div>
-						<div class="col-8">
-							<input type="text" class="w-100 px-2 py-1 fs-5 border"
-								name="lname" id="lname" value="<%=msg.getLname()%>">
-						</div>
+				</div>
+				<div class="row px-3 py-1.1 mt-1">
+					<div class="col-4">
+						<label class="fs-4">LastName</label>
 					</div>
-					<div class="row px-3 py-1.1 mt-1">
-						<div class="col-4">
-							<label class="fs-4">Username</label>
-						</div>
-						<div class="col-8">
-							<input type="text" class="w-100 px-2 py-1 fs-5 border"
-								name="uname" id="uname" readonly="readonly"
-								value="<%=msg.getUsername()%>">
-						</div>
+					<div class="col-8">
+						<input type="text" class="w-100 px-2 py-1 fs-5 border"
+							name="lname" id="lname" value="<%=msg.getLname()%>">
 					</div>
-					<div class="row px-3 py-1.1 mt-1">
-						<div class="col-4">
+				</div>
+				<div class="row px-3 py-1.1 mt-1">
+					<div class="col-4">
+						<label class="fs-4">Username</label>
+					</div>
+					<div class="col-8">
+						<input type="text" class="w-100 px-2 py-1 fs-5 border"
+							name="uname" id="uname" readonly="readonly"
+							value="<%=msg.getUsername()%>">
+					</div>
+				</div>
+				<div class="row px-3 py-1.1 mt-1">
+					<div class="col-4">
 
-							<label class="fs-4">Email</label>
-						</div>
-						<div class="col-8">
-							<input type="text" class="w-100 px-2 py-1 fs-5 border"
-								name="email" id="email" value="<%=msg.getEmail()%>">
-						</div>
+						<label class="fs-4">Email</label>
 					</div>
-					<div class="row px-3 py-1.1 mt-1">
-						<div class="col-4">
-							<label class="fs-4">Phone Number</label>
-						</div>
-						<div class="col-8">
-							<input type="text" class="w-100 px-2 py-1 fs-5 border"
-								name="phno" id="phno" value="<%=msg.getPhno()%>">
-						</div>
+					<div class="col-8">
+						<input type="text" class="w-100 px-2 py-1 fs-5 border"
+							name="email" id="email" value="<%=msg.getEmail()%>">
 					</div>
-					<div class="row text-center">
-						<div class="col pt-2">
-							<input type="submit" class="btn mt-4 " value="Update Profile">
-			</div>
-			</div>
-			</div>
-			
-			</form>
-		</div>
-		</div>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		
+				</div>
+				<div class="row px-3 py-1.1 mt-1">
+					<div class="col-4">
+						<label class="fs-4">Phone Number</label>
+					</div>
+					<div class="col-8">
+						<input type="text" class="w-100 px-2 py-1 fs-5 border" name="phno"
+							id="phno" value="<%=msg.getPhno()%>">
+					</div>
+				</div>
+				
+				<div class="row px-3 py-1.1 mt-1">
+					<div class="col-4">
+						<label class="fs-4">Select Profile Image</label>
+					</div>
+					<div class="col-8">
+						<input type="file" class="w-100 px-2 py-1 fs-5 border" name="profileImage"
+							id="profileImage">
+					</div>
+				</div>
+				
+				<div class="row text-center">
+					<div class="col pt-2">
+						<input type="submit" class="btn mt-4 " value="Update Profile">
+					</div>
+				</div>
+
+		</form>
+	</div>
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+
 </body>
 </html>

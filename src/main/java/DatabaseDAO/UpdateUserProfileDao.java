@@ -37,12 +37,13 @@ public class UpdateUserProfileDao {
 		//it will set the new values(update the record)
 		try{
 			Connection con=DatabaseConnection.getConnection();
-			PreparedStatement ps=con.prepareStatement("update skillexchangeusers set FIRSTNAME=?,LASTNAME=?,EMAIL=? ,PHONENUMBER=? where username=?");
+			PreparedStatement ps=con.prepareStatement("update skillexchangeusers set FIRSTNAME=?,LASTNAME=?,EMAIL=? ,PHONENUMBER=?,PROFILEPIC=? where username=?");
 			ps.setString(1,user.getFname());
 			ps.setString(2,user.getLname());
 			ps.setString(3, user.getEmail());
 			ps.setLong(4,user.getPhno());
-			ps.setString(5, user.getUsername());
+			ps.setBlob(5, user.getImage());
+			ps.setString(6, user.getUsername());
 			k = ps.executeUpdate();
 		}
 		catch(Exception e) {
