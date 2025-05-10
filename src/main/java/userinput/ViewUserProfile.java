@@ -45,6 +45,7 @@ public class ViewUserProfile extends HttpServlet {
 			} 
 			else {
 				req.setAttribute("profile", view);
+				req.setAttribute("msg", req.getParameter("msg"));
 				req.getRequestDispatcher("/public/html/ViewUserProfile.jsp").forward(req, res);
 			}
 		} catch (Exception e) {

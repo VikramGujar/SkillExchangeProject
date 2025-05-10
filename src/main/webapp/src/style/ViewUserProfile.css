@@ -23,6 +23,7 @@ header .img{
 	z-index: -1;
 	width: 25%;
 }
+
 .outer-container{
 	margin-top: -70px !important;
 	z-index: 1 !important;

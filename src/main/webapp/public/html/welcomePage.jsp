@@ -24,6 +24,7 @@
 	<%
 	//Getting UserDataBean object
 	UserDataBean ub = (UserDataBean) session.getAttribute("userbean");
+	String userName = ub.getUsername();
 	%>
 
 	<!--------------------------------- Nav Section start------------------------------------------------->
@@ -75,6 +76,10 @@
 					<div class="profile-pic p-2">
 						<img alt="profile " src="../assets/image/loged-In/profile.png"
 							width="70px">
+							<img
+							src="userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>"
+							alt="Profile Picture"
+							style="width: 100px; height: 100px; border-radius: 50%;" />
 					</div>
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 						Hi,
@@ -88,12 +93,6 @@
 						<li class="nav-item"><a class="nav-link"
 							href="<%=request.getContextPath()%>/view?username=<%=ub.getUsername()%>">View
 								Profile</a></li>
-
-						<a class="nav-link"
-							href="<%=request.getContextPath()%>/viewEditUserPro?username=<%=ub.getUsername()%>">
-							Edit Profile </a>
-
-
 
 						<li class="nav-item">
 							<a class="nav-link" href="#">Settings</a>
