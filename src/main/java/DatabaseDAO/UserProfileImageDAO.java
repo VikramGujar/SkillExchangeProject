@@ -11,10 +11,11 @@ public class UserProfileImageDAO {
 	
 	private final static String sqlQuery="SELECT PROFILEPIC FROM skillExchangeusers WHERE username = ?";
 	
-	Blob imageBlob;
-	
 	public Blob getImage(String userName)
 	{
+		
+		Blob imageBlob = null;
+		
 		try {
 			
 			Connection conn = DatabaseConnection.getConnection();
@@ -27,7 +28,7 @@ public class UserProfileImageDAO {
 
             if (rs.next()) 
             {
-                imageBlob = rs.getBlob("profile_pic");
+                imageBlob = rs.getBlob("PROFILEPIC");
             } 	
 		}
 		catch(Exception e)

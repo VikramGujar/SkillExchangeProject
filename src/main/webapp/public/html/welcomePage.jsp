@@ -31,10 +31,11 @@
 	<nav class="navbar fixed-top">
 		<div class="container-fluid">
 			<!-- d-flex justify-content-between  -->
-			<div class="navbar-brand d-flex justify-content-between w-100" href="#">
+			<div class="navbar-brand d-flex justify-content-between w-100"
+				href="#">
 				<div class="logo">
-					<a href="#"> 
-						<img alt="Logo not found" src="../assets/image/Header-logo.png">
+					<a href="#"> <img alt="Logo not found"
+						src="../assets/image/Header-logo.png">
 					</a>
 				</div>
 
@@ -54,8 +55,8 @@
 
 				<div class="menu-icon d-flex justify-content-between h-25">
 					<div class="notification-icon">
-						<a >
-							<img alt="Notification" src="../assets/image/loged-In/notification.png">
+						<a> <img alt="Notification"
+							src="../assets/image/loged-In/notification.png">
 						</a>
 					</div>
 					<button class="navbar-toggler border border-0" type="button"
@@ -73,13 +74,13 @@
 				<div class="offcanvas-header">
 					<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
 						aria-label="Close"></button>
-					<div class="profile-pic p-2">
-						<img alt="profile " src="../assets/image/loged-In/profile.png"
-							width="70px">
-							<img
-							src="userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>"
-							alt="Profile Picture"
-							style="width: 100px; height: 100px; border-radius: 50%;" />
+					<div class="profile-pic p-2"
+						style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);">
+						<img
+							src="<%=request.getContextPath()%>/userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>"
+							alt="Profile Picture" class="profile-img"
+							style="width: 100px; height: 100px; object-fit: cover;" />
+
 					</div>
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 						Hi,
@@ -94,8 +95,7 @@
 							href="<%=request.getContextPath()%>/view?username=<%=ub.getUsername()%>">View
 								Profile</a></li>
 
-						<li class="nav-item">
-							<a class="nav-link" href="#">Settings</a>
+						<li class="nav-item"><a class="nav-link" href="#">Settings</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="#">Help</a></li>
 						<li><a class=" btn btn-outline-danger" href="#">Logout</a></li>
@@ -108,36 +108,39 @@
 
 	<!--------------------------------- Header Section ------------------------------------------------->
 	<!---------------------------------- Home Section  ------------------------->
-	
-	 <section class="home w-100">
-		<div class="container d-flex h-75 flex-column align-items-start align-content-center justify-content-center gap-2 ">
-		<div class="row ">
-			<div class="col-8">
-				<h1 class="heading fw-bolder mb-5 min-vw-100 w-75 text-break">
-					Share Your Knowledge.<br> Unlock Your Potential.
-				</h1>
+
+	<section class="home w-100">
+		<div
+			class="container d-flex h-75 flex-column align-items-start align-content-center justify-content-center gap-2 ">
+			<div class="row ">
+				<div class="col-8">
+					<h1 class="heading fw-bolder mb-5 min-vw-100 w-75 text-break">
+						Share Your Knowledge.<br> Unlock Your Potential.
+					</h1>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<p class="w-50 w-75 description">
-					SkillExchange is a platform
-					where users can teach what they know and learn what they don't,
-					fostering a collaborative environment for skill-sharing and mutual
-					growth, with a focus on personal and professional development.
-				</p>
+			<div class="row">
+				<div class="col-12">
+					<p class="w-50 w-75 description">SkillExchange is a platform
+						where users can teach what they know and learn what they don't,
+						fostering a collaborative environment for skill-sharing and mutual
+						growth, with a focus on personal and professional development.</p>
+				</div>
 			</div>
-		</div>
-		<div class="row w-75 mt-1 btns">
-			<div class="col-4 start-container">
-					<a href="startJourneyForm.html" class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start Your Journey</a>
+			<div class="row w-75 mt-1 btns">
+				<div class="col-4 start-container">
+					<a href="startJourneyForm.html"
+						class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start
+						Your Journey</a>
+				</div>
+				<div class="col-8 mt-1">
+					<a href="#about"
+						class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn
+						More</a>
+				</div>
 			</div>
-			<div class="col-8 mt-1">
-					<a href="#about" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn More</a>
-			</div>
-		</div>
-		
-		
+
+
 			<!-- 
 			<h1 class="slogun">Share Your Knowledge. Unlock Your Potential.</h1>
 			<p class="lead mb-4 home-paragraph">SkillExchange is a platform
@@ -148,7 +151,7 @@
 				<a href="#start" class="btn btn-primary btn-lg me-3">Start Your Journey</a> 
 				<a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
 			</div> -->
-			
+
 		</div>
 	</section>
 

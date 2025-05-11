@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 @SuppressWarnings("serial")
-@WebServlet("/userImage")
+@WebServlet("/userImage") 
 public class UserProfileImage extends HttpServlet {
 	
 	// Creating Class Ref
@@ -28,6 +28,11 @@ public class UserProfileImage extends HttpServlet {
 	{
 		try {
 			
+			if (userImgDao == null) {
+			    userImgDao = new UserProfileImageDAO();
+			}
+			
+			
 			String username = req.getParameter("username"); 
 			
 			Blob imageBlob = userImgDao.getImage(username);
@@ -42,9 +47,9 @@ public class UserProfileImage extends HttpServlet {
 	        } 
 			else 
 			{
+				System.out.println("Blob is null");
 	            // Send a default image if user has no profile pic
 	            res.sendRedirect("../assets/image/loged-In/profile.png");
-	            System.out.println("Blob is null");
 	        }
 		}
 		catch(Exception e)
