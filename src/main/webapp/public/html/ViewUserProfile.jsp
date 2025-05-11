@@ -16,8 +16,8 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="src/style/ViewUserProfile.css" />
 <style>
-	.msg{
-	color:rgb(0,0,200);
+.msg {
+	color: rgb(0, 0, 200);
 	font-size: 15px;
 	text-align: center;
 	margin-left: -90px;
@@ -30,6 +30,14 @@
 			src="public/assets/image/profile/profile-bg.jpg">
 	</header>
 
+	<%
+	ArrayList<UserDataBean> al = (ArrayList<UserDataBean>) request.getAttribute("profile");
+	String msg = (String) request.getAttribute("msg");
+	String userName = null;
+
+	for (UserDataBean user : al)
+		userName = user.getUsername();
+	%>
 	<div
 		class="container p-5 w-75 shadow p-3 pt-0 pb-5 mb-5 bg-light outer-container">
 		<!-- outer container start-->
@@ -38,13 +46,10 @@
 			<div
 				class="row profile-pic shadow p-3 mb-5 bg-body-tertiary rounded mx-auto p-2">
 				<img alt="Profile picture"
-					src="public/assets/image/profile/profile.png" />
+					src="<%=request.getContextPath()%>/userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>" />
 			</div>
 
-			<%
-			ArrayList<UserDataBean> al = (ArrayList<UserDataBean>) request.getAttribute("profile");
-			String msg = (String) request.getAttribute("msg");
-			%>
+
 			<%
 			for (UserDataBean view : al) {
 			%>
