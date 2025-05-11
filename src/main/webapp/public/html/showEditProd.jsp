@@ -21,6 +21,10 @@
 			src="public/assets/image/profile/profile-bg.jpg">
 	</header>
 
+	<%
+	UserDataBean msg = (UserDataBean) request.getAttribute("user");
+	String userName= msg.getUsername();
+	%>
 	<div
 		class="container p-5 w-75 shadow p-3 pt-0 pb-5 mb-5 bg-light outer-container">
 		<!-- outer container start-->
@@ -29,12 +33,8 @@
 			<div
 				class="row profile-pic shadow p-3 mb-5 bg-body-tertiary rounded mx-auto p-2">
 				<img alt="Profile picture"
-					src="public/assets/image/profile/profile.png" />
+					src="<%=request.getContextPath()%>/userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>" />
 			</div>
-
-			<%
-			UserDataBean msg = (UserDataBean) request.getAttribute("user");
-			%>
 
 			<!-- <h1>Update User</h1> -->
 
@@ -87,25 +87,25 @@
 							id="phno" value="<%=msg.getPhno()%>">
 					</div>
 				</div>
-				
+
 				<div class="row px-3 py-1.1 mt-1">
 					<div class="col-4">
 						<label class="fs-4">Select Profile Image</label>
 					</div>
 					<div class="col-8">
-						<input type="file" class="w-100 px-2 py-1 fs-5 border" name="profileImage"
-							id="profileImage">
+						<input type="file" class="w-100 px-2 py-1 fs-5 border"
+							name="profileImage" id="profileImage" accept=".jpg, .jpeg, .png">
 					</div>
 				</div>
-				
+
 				<div class="row text-center">
 					<div class="col pt-2">
 						<input type="submit" class="btn mt-4 " value="Update Profile">
 					</div>
 				</div>
 
-		</form>
-	</div>
+			</form>
+		</div>
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

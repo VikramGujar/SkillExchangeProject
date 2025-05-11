@@ -78,9 +78,8 @@
 						style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);">
 						<img
 							src="<%=request.getContextPath()%>/userImage?username=<%=java.net.URLEncoder.encode(userName, "UTF-8")%>"
-							alt="Profile Picture" class="profile-img"
-							style="width: 100px; height: 100px; object-fit: cover;" />
-
+							alt="Profile Picture"
+							style="width: 150%; height: 120%; object-fit: cover; object-position: center;" />
 					</div>
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 						Hi,

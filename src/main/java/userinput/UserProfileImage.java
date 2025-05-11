@@ -10,53 +10,41 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
 @SuppressWarnings("serial")
-@WebServlet("/userImage") 
+@WebServlet("/userImage")
 public class UserProfileImage extends HttpServlet {
-	
+
 	// Creating Class Ref
 	UserProfileImageDAO userImgDao;
-	
-	public void init()
-	{
-		//Creating Object for DAO
+
+	public void init() {
+		// Creating Object for DAO
 		userImgDao = new UserProfileImageDAO();
 	}
 
-	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
-	{
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		try {
-			
+
 			if (userImgDao == null) {
-			    userImgDao = new UserProfileImageDAO();
+				userImgDao = new UserProfileImageDAO();
 			}
-			
-			
-			String username = req.getParameter("username"); 
-			
+
+			String username = req.getParameter("username");
+
 			Blob imageBlob = userImgDao.getImage(username);
-			
-			
-			if (imageBlob != null) 
-			{
-				System.out.println("Blob is not null..");
-	            byte[] imgBytes = imageBlob.getBytes(1, (int) imageBlob.length());
-	            res.setContentType("image/jpeg");
-	            res.getOutputStream().write(imgBytes);
-	        } 
-			else 
-			{
-				System.out.println("Blob is null");
-	            // Send a default image if user has no profile pic
-	            res.sendRedirect("../assets/image/loged-In/profile.png");
-	        }
-		}
-		catch(Exception e)
-		{
+
+			if (imageBlob != null) {
+				byte[] imgBytes = imageBlob.getBytes(1, (int) imageBlob.length());
+				res.setContentType("image/jpeg");
+				res.getOutputStream().write(imgBytes);
+			} else {
+				// Send a default image if user has no profile pic
+				res.sendRedirect(req.getContextPath() + "/public/assets/image/profile/profile.png");
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
