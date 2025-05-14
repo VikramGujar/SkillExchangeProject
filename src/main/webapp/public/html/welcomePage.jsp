@@ -133,7 +133,7 @@
 						Your Journey</a>
 				</div>
 				<div class="col-8 mt-1">
-					<a href="#about"
+					<a href="about.html"
 						class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4 py-1">Learn
 						More</a>
 				</div>
