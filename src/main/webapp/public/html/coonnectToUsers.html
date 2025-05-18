@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Your Teacher</title>
+    <title>Find Your Skill Exchange Teacher</title>
 
     <!-- Bootstrap Library -->
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
     <!-- React Library -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -21,78 +17,301 @@
     <!-- Compiler Library -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    <style>
+        :root {
+            --primary-color: #6F69E8;
+            --secondary-color: #FB4899;
+            --dark-color: #332F80;
+            --light-color: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+        }
+        
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .search-input {
+            border-radius: 20px;
+            padding: 10px 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .search-input:focus {
+            background-color: rgba(255,255,255,0.3);
+            border-color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.25);
+            color: white;
+        }
+        
+        .search-btn {
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: 600;
+            background-color: var(--secondary-color);
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .user-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            margin: 15px;
+            width: 280px;
+        }
+        
+        .user-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: -40px auto 15px;
+            display: block;
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
+        
+        .action-btn {
+            border-radius: 50px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            width: 120px;
+            margin: 0 5px;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .user-name {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+        
+        .user-title {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .skills-container {
+            min-height: 60px;
+            margin-bottom: 15px;
+        }
+    </style>
 
-    <!-- React Application Library -->
     <script type="text/babel">
-        
-    function Navbar() {
-    return (
-        <nav className="navbar navbar-expand-lg bg-primary p-2">
-            <div className="container-fluid">
-                <a className="navbar-brand text-white d-flex align-items-center" href="#">
-                    <img src="../../public/assets/image/logo.png" alt="Logo" style={{ height: '50px', marginRight: '10px', width: '100px' }} />
-                </a>
-                <div className="d-flex">
-                    <input type="text" className="form-control me-2" placeholder="Search for" />
-                    <input type="text" className="form-control me-2" placeholder="Skill to search" />
-                    <button className="btn btn-danger">Search</button>
+        function Navbar() {
+            return (
+                <nav className="navbar navbar-expand-lg navbar-custom p-3 sticky-top">
+                    <div className="container-fluid">
+                        <a className="navbar-brand text-white d-flex align-items-center" href="#">
+                            <img src="../../public/assets/image/logo.png" alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
+                            <span style={{ fontWeight: '600' }}>SkillExchange</span>
+                        </a>
+                        
+                        <div className="d-flex align-items-center">
+                            <div className="input-group me-3" style={{ width: '400px' }}>
+                                <input 
+                                    type="text" 
+                                    className="form-control search-input" 
+                                    placeholder="Search teachers..." 
+                                />
+                                <button className="btn search-btn">
+                                    <i className="bi bi-search me-2"></i>Search
+                                </button>
+                            </div>
+                            
+                            <div className="dropdown">
+                                <img 
+                                    src="../../public/assets/image/review-2.jpeg" 
+                                    alt="profile-pic" 
+                                    className="dropdown-toggle" 
+                                    id="profileDropdown" 
+                                    data-bs-toggle="dropdown"
+                                    style={{ 
+                                        height: '45px', 
+                                        width: '45px', 
+                                        borderRadius: '50%', 
+                                        objectFit: 'cover', 
+                                        cursor: 'pointer',
+                                        border: '2px solid white'
+                                    }} 
+                                />
+                                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                    <li><a className="dropdown-item" href="#"><i className="bi bi-person me-2"></i>Profile</a></li>
+                                    <li><a className="dropdown-item" href="#"><i className="bi bi-gear me-2"></i>Settings</a></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><a className="dropdown-item" href="#"><i className="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            );
+        }
+
+        function UserCard({ firstName, lastName, skills, whatsapp, email, expertise }) {
+            return (
+                <div className="card user-card">
+                    <div className="card-body text-center pt-5 pb-3">
+                        <img 
+                            src="../../public/assets/image/review-1.jpeg" 
+                            alt="profile-pic" 
+                            className="profile-img" 
+                        />
+                        <h5 className="user-name">{firstName} {lastName}</h5>
+                        <p className="user-title">{expertise}</p>
+                        
+                        <div className="skills-container">
+                            {skills.slice(0, 4).map((skill, index) => (
+                                <span key={index} className="skill-badge">{skill}</span>
+                            ))}
+                            {skills.length > 4 && (
+                                <span className="skill-badge">+{skills.length - 4}</span>
+                            )}
+                        </div>
+                        
+                        <div className="d-flex justify-content-center mt-3">
+                            <a 
+                                href={`https://wa.me/${whatsapp}`} 
+                                className="btn btn-success action-btn me-2" 
+                                target="_blank"
+                            >
+                                <i className="bi bi-whatsapp me-1"></i>Chat
+                            </a>
+                            <a 
+                                href={`mailto:${email}`} 
+                                className="btn btn-primary action-btn"
+                            >
+                                <i className="bi bi-envelope me-1"></i>Email
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            <img src="../../public/assets/image/review-2.jpeg" alt="profile-pic" style={{ height: '50px', width: '50px', borderRadius: '50%', backgroundColor: 'grey', objectFit: 'cover', margin: '0px' }} />
-            </div>
-        </nav>
-    );
-}
+            );
+        }
 
-function UserCard({ firstName, lastName, skills, whatsapp, email }) {
-    return (
-        <div className="card text-center p-3 m-2 shadow-sm" style={{ width: '250px' }}>
-			
-            <img src="../../public/assets/image/review-1.jpeg" alt="profile-pic" style={{ height: '50px', width: '50px', borderRadius: '50%', backgroundColor: 'grey', objectFit: 'cover', margin: 'auto' }} />
-            <h5 className="mt-2">{firstName} {lastName}</h5>
-            <p className="text-muted">{skills.join(", ")}</p>
-            <div className="d-flex justify-content-around mt-2">
-                <a href={`https://wa.me/${whatsapp}`} className="btn btn-success" target="_blank">WhatsApp</a>
-                <a href={`mailto:${email}`} className="btn btn-primary">G-Mail</a>
-            </div>
-        </div>
-    );
-}
+        function UserGrid() {
+            const users = [
+                { 
+                    firstName: "John", 
+                    lastName: "Doe", 
+                    expertise: "Full Stack Developer",
+                    skills: ["Java", "HTML", "CSS", "JavaScript", "React", "Spring"], 
+                    whatsapp: "1234567890", 
+                    email: "john.doe@example.com" 
+                },
+                { 
+                    firstName: "Jane", 
+                    lastName: "Smith", 
+                    expertise: "Data Scientist",
+                    skills: ["Python", "Django", "Machine Learning", "TensorFlow"], 
+                    whatsapp: "9876543210", 
+                    email: "jane.smith@example.com" 
+                },
+                { 
+                    firstName: "Alex", 
+                    lastName: "Johnson", 
+                    expertise: "UI/UX Designer",
+                    skills: ["Figma", "Adobe XD", "User Research", "Prototyping"], 
+                    whatsapp: "5551234567", 
+                    email: "alex.j@example.com" 
+                },
+                { 
+                    firstName: "Sarah", 
+                    lastName: "Williams", 
+                    expertise: "Mobile Developer",
+                    skills: ["Flutter", "Dart", "Firebase", "Android"], 
+                    whatsapp: "4447654321", 
+                    email: "sarah.w@example.com" 
+                },
+                { 
+                    firstName: "Michael", 
+                    lastName: "Brown", 
+                    expertise: "DevOps Engineer",
+                    skills: ["Docker", "Kubernetes", "AWS", "CI/CD"], 
+                    whatsapp: "3339876543", 
+                    email: "michael.b@example.com" 
+                },
+                { 
+                    firstName: "Emily", 
+                    lastName: "Davis", 
+                    expertise: "Digital Marketer",
+                    skills: ["SEO", "Social Media", "Content Strategy", "Analytics"], 
+                    whatsapp: "2224567890", 
+                    email: "emily.d@example.com" 
+                }
+            ];
+            
+            return (
+                <div className="container py-4">
+                    <h3 className="mb-4" style={{ color: 'var(--dark-color)' }}>
+                        <i className="bi bi-people-fill me-2"></i>Available Teachers
+                    </h3>
+                    <div className="d-flex flex-wrap justify-content-start">
+                        {users.map((user, index) => (
+                            <UserCard key={index} {...user} />
+                        ))}
+                    </div>
+                </div>
+            );
+        }
 
-function UserGrid() {
-    const users = [
-        { firstName: "John", lastName: "Doe", skills: ["Java", "HTML", "CSS", "JavaScript", "React", "Spring"], whatsapp: "1234567890", email: "john.doe@example.com" },
-        { firstName: "Jane", lastName: "Smith", skills: ["Python", "Django", "Machine Learning"], whatsapp: "9876543210", email: "jane.smith@example.com" },
-        
-    ];
-    return (
-        <div className="container mt-4">
-            <div className="d-flex flex-wrap justify-content-center">
-                {users.map((user, index) => (
-                    <UserCard key={index} {...user} />
-                ))}
-            </div>
-        </div>
-    );
-}
-    
-
-        // Main div which will contain all components
+        // Main component
         function Main(){
             return(
                 <div>
-                  <Navbar />
-                  <UserGrid />
+                    <Navbar />
+                    <UserGrid />
                 </div>
             )
         }
 
-        // Render method to attach application to root div
+        // Render application
         ReactDOM.render(<Main />, document.getElementById("root"));
     </script>
 </head>
 <body>
-    <noscript>Please enable JavaScript on your browser.</noscript>
-    <!-- Div with id root [Main Div] -->
+    <noscript>Please enable JavaScript to use this application.</noscript>
     <div id="root"></div>
 </body>
 </html>
