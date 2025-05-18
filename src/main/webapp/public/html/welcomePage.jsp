@@ -1,4 +1,4 @@
-<%@ page import="javabean.UserDataBean"%>
+<%@ page import="javabean.UserDataBean" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,6 +19,20 @@
 
 </head>
 <body>
+
+	<%
+	
+	// Prevent browser caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+	
+	// Session check
+	if (session == null || session.getAttribute("userbean") == null) {
+    response.sendRedirect(request.getContextPath() + "/public/html/userlogin.jsp");
+    return;
+    }
+	%>
 
 	<!--------------------------------- JSP Code ------------------------------------------------->
 	<%
@@ -94,10 +108,11 @@
 							href="<%=request.getContextPath()%>/view?username=<%=ub.getUsername()%>">View
 								Profile</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="settingPage.html">Settings</a>
-						</li>
+						<li class="nav-item"><a class="nav-link"
+							href="settingPage.html">Settings</a></li>
 						<li class="nav-item"><a class="nav-link" href="helpPage.html">Help</a></li>
-						<li><a class=" btn btn-outline-danger" href="#">Logout</a></li>
+						<li><a class=" btn btn-outline-danger"
+							href="<%=request.getContextPath()%>/logoutServlet">Logout</a></li>
 					</ul>
 				</div>
 			</div>

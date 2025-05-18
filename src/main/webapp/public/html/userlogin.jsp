@@ -45,7 +45,6 @@
         <div class="message">
             <p><%= msg %></p>
         </div>
-
         <%@ include file="login.html" %>
     </div>
 </body>
