@@ -85,7 +85,10 @@
             </div>
         </div>
     </div>
-
+ <!-- Fixed back button at the bottom right -->
+    <a href="<%= request.getContextPath() %>/public/html/welcomePage.jsp" class="back-to-home-btn">
+        <i class="bi bi-house-door-fill"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

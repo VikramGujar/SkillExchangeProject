@@ -190,6 +190,41 @@
             padding: 0 20px;
         }
     }
+    
+    
+.back-to-home-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .back-to-home-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
 </style>
 </head>
 <body>
@@ -254,7 +289,9 @@
             </div>
         </div>
     </div>
-
+    <a href="<%= request.getContextPath() %>/public/html/welcomePage.jsp" class="back-to-home-btn">
+        <i class="bi bi-house-door-fill"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Show selected file name
