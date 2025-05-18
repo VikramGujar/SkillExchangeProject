@@ -1,9 +1,9 @@
 /************** styles for index.html ****************/
 /*----------------------------------- Variable Declaration--------------------------------------*/
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
 }
-
 :root { 
     --bg-color: rgb(255, 255, 255); 
     --text-color: rgb(255, 255, 255); 
