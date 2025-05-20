@@ -38,6 +38,10 @@ public class LoginDAO {
 				ub.setPass(rs.getString(4));
 				ub.setEmail(rs.getString(5));
 				ub.setPhno(rs.getLong(6));
+				ub.setSkillToTeach(rs.getString(7));
+				ub.setSkillToLearn(rs.getString(8));
+				ub.setRating(rs.getInt(9));
+				
 			}
 		}
 		catch(Exception e)
