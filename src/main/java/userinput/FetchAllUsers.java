@@ -1,29 +1,29 @@
 package userinput;
 
 import java.io.IOException;
-
+import java.util.Set;
+import DatabaseDAO.FetchAllUsersDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import javabean.UserDataBean;
 
 @WebServlet("/fetchAllUsers")
 public class FetchAllUsers extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-   
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        FetchAllUsersDAO fetchDao = new FetchAllUsersDAO();
+        Set<UserDataBean> allUsers = fetchDao.getAllUsers();
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("FetchAllUsers.doPost()");
-	}
+        HttpSession session = request.getSession();
+        session.setAttribute("allUsers", allUsers);
 
+        // Correct way to redirect
+        response.sendRedirect(request.getContextPath() + "/public/html/allUsers.jsp");
+    }
 }

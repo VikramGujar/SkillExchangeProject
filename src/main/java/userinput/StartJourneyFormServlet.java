@@ -11,55 +11,60 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import javabean.UserDataBean;
 
-@WebServlet("/public/html/startJourneyForm")
+@WebServlet("/startJourneyForm")
 public class StartJourneyFormServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	
-	// Creating reference variable for Classes
-	UserDataBean ub = null;
-	StartJourneyFormDAO sjf;
+    private static final long serialVersionUID = 1L;
 
-	// Method for creating object before used
-	@Override
-	public void init() 
-	{
-		ub = new UserDataBean();
-		sjf= new StartJourneyFormDAO();
-		
-	}
+    private StartJourneyFormDAO sjf;
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
-	{
-		//Setting data into UserBean
-		ub.setPhno(Long.parseLong(req.getParameter("phoneNumber")));
-		ub.setEmail(req.getParameter("email"));
-		ub.setSkillToLearn(req.getParameter("skillToLearn"));
-		ub.setSkillToTeach(req.getParameter("skillToTeach"));
-		ub.setRating(Integer.parseInt(req.getParameter("skillRating")));
-		
-		// Get ServletContext object
-        ServletContext sct = req.getServletContext();
-        // Retrieve UserBean object
-        UserDataBean ub1 = (UserDataBean) sct.getAttribute("ubean");
-		
-        //Setting the username in UserDataBean
-        ub.setUsername(ub1.getUsername());
+    @Override
+    public void init() {
+    	System.out.println("Whats wrong");
+        sjf = new StartJourneyFormDAO();
+    }
 
-		
-		//Storing into DAO and getting result
-		int result=sjf.storeData(ub);
-		System.out.println(result);
-		//Checking data is stored or not in DB
-		if (result > 0) 
-		{
-			System.out.println("Data Updated in Database");
-			res.sendRedirect("fetchAllUsers");
-		} 
-		else 
-		{
-			System.out.println("Data Not Updated in Database");
-		}
-	}
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        try {
+            String phoneStr = req.getParameter("phoneNumber");
+            String email = req.getParameter("email");
+            String skillToLearn = req.getParameter("skillToLearn");
+            String skillToTeach = req.getParameter("skillToTeach");
+            String ratingStr = req.getParameter("skillRating");
 
+            if (phoneStr == null || email == null || skillToLearn == null || skillToTeach == null || ratingStr == null) {
+                res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing form parameters.");
+                return;
+            }
+
+            UserDataBean ub = new UserDataBean();
+            ub.setPhno(Long.parseLong(phoneStr));
+            ub.setEmail(email);
+            ub.setSkillToLearn(skillToLearn);
+            ub.setSkillToTeach(skillToTeach);
+            ub.setRating(Integer.parseInt(ratingStr));
+
+            ServletContext sct = req.getServletContext();
+            UserDataBean sessionUser = (UserDataBean) sct.getAttribute("ubean");
+
+            if (sessionUser == null) {
+                res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "User not logged in.");
+                return;
+            }
+
+            ub.setUsername(sessionUser.getUsername());
+System.out.println("Sir");
+            int result = sjf.storeData(ub);
+            if (result > 0) {
+                res.sendRedirect(req.getContextPath() + "/fetchAllUsers");
+                return;
+            } else {
+                res.getWriter().write("<h3>Failed to save user data. Try again.</h3>");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            res.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
 }
