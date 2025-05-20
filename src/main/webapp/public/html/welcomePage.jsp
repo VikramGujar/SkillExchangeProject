@@ -22,15 +22,14 @@
 
 	<%
 	
-	// Prevent browser caching
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-    response.setHeader("Pragma", "no-cache");
-    response.setDateHeader("Expires", 0);
-	
 	// Session check
-	if (session == null || session.getAttribute("userbean") == null) {
-    response.sendRedirect(request.getContextPath() + "/public/html/userlogin.jsp");
-    return;
+	if (session == null || session.getAttribute("userbean") == null) 
+	{
+    	response.sendRedirect(request.getContextPath() + "/public/html/userlogin.jsp");
+    	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	    response.setHeader("Pragma", "no-cache");
+	    response.setDateHeader("Expires", 0);
+	    return;
     }
 	%>
 
@@ -141,9 +140,12 @@
 						growth, with a focus on personal and professional development.</p>
 				</div>
 			</div>
+			<%  long no = ub.getPhno();
+				String destiny = no==0?"startJourneyForm.html":"fetchAllUsers";
+			%>
 			<div class="row w-75 mt-1 btns">
 				<div class="col-4 start-container">
-					<a href="startJourneyForm.html"
+					<a href=<%= destiny %>
 						class="btn  border-0 btn-start rounded-pill fs-4 text-white px-4 py-1">Start
 						Your Journey</a>
 				</div>

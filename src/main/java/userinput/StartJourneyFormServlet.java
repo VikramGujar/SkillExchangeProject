@@ -54,6 +54,7 @@ public class StartJourneyFormServlet extends HttpServlet {
 		if (result > 0) 
 		{
 			System.out.println("Data Updated in Database");
+			res.sendRedirect("fetchAllUsers");
 		} 
 		else 
 		{
