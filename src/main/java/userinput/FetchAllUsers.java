@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import javabean.UserDataBean;
 
-@WebServlet("/fetchAllUsers")
+@WebServlet("/fetchAllUsers") // Here but in the application 
 public class FetchAllUsers extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

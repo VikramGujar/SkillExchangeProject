@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import javabean.UserDataBean;
 
-@WebServlet("/startJourneyForm")
+@WebServlet("/startJourneyForm") 
 public class StartJourneyFormServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -19,7 +19,7 @@ public class StartJourneyFormServlet extends HttpServlet {
 
     @Override
     public void init() {
-    	System.out.println("Whats wrong");
+    	System.out.println("Whats wrong"); 
         sjf = new StartJourneyFormDAO();
     }
 
@@ -56,7 +56,7 @@ public class StartJourneyFormServlet extends HttpServlet {
 System.out.println("Sir");
             int result = sjf.storeData(ub);
             if (result > 0) {
-                res.sendRedirect(req.getContextPath() + "/fetchAllUsers");
+                res.sendRedirect(req.getContextPath() + "/fetchAllUsers");  
                 return;
             } else {
                 res.getWriter().write("<h3>Failed to save user data. Try again.</h3>");

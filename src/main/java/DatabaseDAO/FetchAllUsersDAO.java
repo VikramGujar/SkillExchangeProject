@@ -14,7 +14,7 @@ public class FetchAllUsersDAO {
     public Set<UserDataBean> getAllUsers() {
         Set<UserDataBean> allUsers = new HashSet<>();
 
-        String query = "SELECT fname, lname, username, email, phonenumber, skilltoteach, skilltolearn, rating FROM skillexchangeusers";
+        String query = "SELECT firstname, lastname, username, email, phonenumber, skilltoteach, skilltolearn, rating FROM skillexchangeusers";
 
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(query);
@@ -22,8 +22,8 @@ public class FetchAllUsersDAO {
 
             while (rs.next()) {
                 UserDataBean ub = new UserDataBean();
-                ub.setFname(rs.getString("fname"));
-                ub.setLname(rs.getString("lname"));
+                ub.setFname(rs.getString("firstname"));
+                ub.setLname(rs.getString("lastname"));
                 ub.setUsername(rs.getString("username"));
                 ub.setEmail(rs.getString("email"));
                 ub.setPhno(rs.getLong("phonenumber"));
