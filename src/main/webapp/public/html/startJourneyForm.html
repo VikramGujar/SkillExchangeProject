@@ -12,8 +12,8 @@
 <body>
     <div class="container">
         <h1>Discover. Learn. Teach. Join the SkillExchange World!</h1>
-        <form action="startJourneyForm" method="post">
-            <input type="tel" placeholder="WhatsApp contact number" name="phoneNumber" required>
+        <form action="/SkillExchangeProject/startJourneyform" method="post">
+            <input type="tel" placeholder="WhatsApp contact number" name="phoneNumber" minlength="10" maxlength="10" required>
             <input type="email" placeholder="Email ID" name="email" required>
             <input type="text" placeholder="Skill to Learn" name="skillToLearn" required>
             <input type="text" placeholder="Skill to Teach" name="skillToTeach" required>
