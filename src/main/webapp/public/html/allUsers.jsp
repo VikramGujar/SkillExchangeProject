@@ -292,6 +292,8 @@
             <%
                 if (users != null && !users.isEmpty()) {
                     for (UserDataBean user : users) {
+                    	if(user.getSkillToLearn()!=null)
+                    	{
             %>
             <div class="col-lg-4 col-md-6">
                 <div class="card user-card h-100">
@@ -345,7 +347,7 @@
                 </div>
             </div>
             <%
-                    }
+                    	} }
                 } else {
             %>
             <div class="col-12">
