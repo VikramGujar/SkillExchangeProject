@@ -23,7 +23,7 @@ public class StartJourneyFormServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		try {
 			String phoneStr = req.getParameter("phoneNumber");
 			String email = req.getParameter("email");
@@ -33,7 +33,10 @@ public class StartJourneyFormServlet extends HttpServlet {
 
 			if (phoneStr == null || email == null || skillToLearn == null || skillToTeach == null
 					|| ratingStr == null) {
-				res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing form parameters.");
+
+				// Redirecting to StartJourny form
+				res.sendRedirect("startJourneyForm.html");
+
 				return;
 			}
 
