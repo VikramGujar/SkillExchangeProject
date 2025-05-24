@@ -29,7 +29,7 @@
     UserDataBean ub = (UserDataBean) session.getAttribute("userbean");
     String userName = ub.getUsername();
     long phNo = ub.getPhno();
-    String destiny = (phNo == 0) ? "startJourneyForm" : request.getContextPath() + "/allUsersServlet";
+    String destiny = (phNo == 0) ? "startJourneyForm.html" : request.getContextPath() + "/allUsersServlet";
 %>
 
 <!-- Navbar Section -->

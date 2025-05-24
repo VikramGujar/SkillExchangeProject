@@ -1,101 +1,115 @@
 package javabean;
 
 import java.io.InputStream;
-//JavaBean Class for data storing and getting 
 import java.io.Serializable;
 
+/**
+ * JavaBean Class for storing and accessing user data
+ */
 @SuppressWarnings("serial")
-public class UserDataBean implements Serializable{
-	
-	//User properties
-	private String fname,lname,username,pass,email,skillToTeach,skillToLearn;
-	private long phno;
-	private int rating;
-	private InputStream image;
-	
+public class UserDataBean implements Serializable {
 
-	//No-Para Constructor
-	public UserDataBean() {}
-	
-	//Getter and Setter for get and set the data
-	public String getFname() {
-		return fname;
-	}
+    // User personal details
+    private String fname;
+    private String lname;
 
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
+    // Credentials
+    private String username;
+    private String pass;
 
-	public String getLname() {
-		return lname;
-	}
+    // Contact and identification
+    private String email;
+    private long phno;
 
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
+    // Skills
+    private String skillToTeach;
+    private String skillToLearn;
 
-	public String getUsername() {
-		return username;
-	}
+    // Other info
+    private int rating;
+    private InputStream image;
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    // No-arg constructor
+    public UserDataBean() {}
 
-	public String getPass() {
-		return pass;
-	}
+    // Getters and Setters
+    public String getFname() {
+        return fname;
+    }
 
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-	
-	public String getSkillToTeach() {
-		return skillToTeach;
-	}
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
 
-	public void setSkillToTeach(String skillToTeach) {
-		this.skillToTeach = skillToTeach;
-	}
+    public String getLname() {
+        return lname;
+    }
 
-	public String getSkillToLearn() {
-		return skillToLearn;
-	}
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
 
-	public void setSkillToLearn(String skillToLearn) {
-		this.skillToLearn = skillToLearn;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public int getRating() {
-		return rating;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
+    public String getPass() {
+        return pass;
+    }
 
-	public long getPhno() {
-		return phno;
-	}
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
 
-	public void setPhno(long phno) {
-		this.phno = phno;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public InputStream getImage() {
-		return image;
-	}
+    public long getPhno() {
+        return phno;
+    }
 
-	public void setImage(InputStream image) {
-		this.image = image;
-	}
-	
+    public void setPhno(long phno) {
+        this.phno = phno;
+    }
+
+    public String getSkillToTeach() {
+        return skillToTeach;
+    }
+
+    public void setSkillToTeach(String skillToTeach) {
+        this.skillToTeach = skillToTeach;
+    }
+
+    public String getSkillToLearn() {
+        return skillToLearn;
+    }
+
+    public void setSkillToLearn(String skillToLearn) {
+        this.skillToLearn = skillToLearn;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public InputStream getImage() {
+        return image;
+    }
+
+    public void setImage(InputStream image) {
+        this.image = image;
+    }
 }
