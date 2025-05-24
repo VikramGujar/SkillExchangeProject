@@ -377,12 +377,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="settingPage.html">
                             <i class="bi bi-gear me-2"></i>Settings
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="helpPage.html">
                             <i class="bi bi-question-circle me-2"></i>Help
                         </a>
                     </li>
