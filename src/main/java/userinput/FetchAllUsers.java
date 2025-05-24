@@ -11,19 +11,19 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import javabean.UserDataBean;
 
-@WebServlet("/fetchAllUsers") // Here but in the application 
+@WebServlet("/fetchAllUsers") // Here but in the application
 public class FetchAllUsers extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        FetchAllUsersDAO fetchDao = new FetchAllUsersDAO();
-        Set<UserDataBean> allUsers = fetchDao.getAllUsers();
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		FetchAllUsersDAO fetchDao = new FetchAllUsersDAO();
+		Set<UserDataBean> allUsers = fetchDao.getAllUsers();
+		System.out.println(allUsers.size());
 
-        HttpSession session = request.getSession();
-        session.setAttribute("allUsers", allUsers);
+		HttpSession session = request.getSession();
+		session.setAttribute("allUsers", allUsers);
 
-        // Correct way to redirect
-        response.sendRedirect(request.getContextPath() + "/public/html/allUsers.jsp");
-    }
+		response.sendRedirect(request.getContextPath() + "/public/html/allUsers.jsp");
+	}
 }

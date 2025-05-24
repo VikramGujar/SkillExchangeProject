@@ -15,7 +15,7 @@ public class FetchAllUsersDAO {
 		String query = "SELECT firstname, lastname, username, email, phonenumber, skilltoteach, skilltolearn, rating, profilepic FROM skillexchangeusers";
 
 		try {
-			
+
 			Connection con = DatabaseConnection.getConnection();
 			PreparedStatement ps = con.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
@@ -39,23 +39,38 @@ public class FetchAllUsersDAO {
 	}
 
 	// Used when fetching a single user by username
-	public UserDataBean getUserWithImage(String username) {
+	public UserDataBean getUserWithImage(String username) 
+	{
 		String query = "SELECT firstname, lastname, username, email, phonenumber, skilltoteach, skilltolearn, rating, profilepic FROM skillexchangeusers WHERE username = ?";
 
-		try (Connection con = DatabaseConnection.getConnection(); PreparedStatement ps = con.prepareStatement(query)) {
+		try {
+			
+			Connection con = DatabaseConnection.getConnection();
+			PreparedStatement ps = con.prepareStatement(query);
+		
 			ps.setString(1, username);
-			try (ResultSet rs = ps.executeQuery()) {
-				if (rs.next()) {
+			try {
+				ResultSet rs = ps.executeQuery();
+				if (rs.next()) 
+				{
 					UserDataBean ub = createUserFromResultSet(rs);
 					Blob blob = rs.getBlob("profilepic");
-					if (blob != null) {
+					if (blob != null) 
+					{
 						ub.setImage(blob.getBinaryStream());
 					}
 					return ub;
 				}
 			}
-		} catch (Exception e) {
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		catch (Exception e)
+		{
 			e.printStackTrace();
+		
 		}
 		return null;
 	}

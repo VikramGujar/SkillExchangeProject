@@ -20,11 +20,6 @@
         return;
     }
 
-    // Prevent back navigation after logout
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-    response.setHeader("Pragma", "no-cache");
-    response.setDateHeader("Expires", 0);
-
     // Get user data
     UserDataBean ub = (UserDataBean) session.getAttribute("userbean");
     String userName = ub.getUsername();

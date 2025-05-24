@@ -364,7 +364,7 @@
     </div>
 
     <!-- Back to Home Floating Button -->
-    <a href="home.jsp" class="back-to-home-btn" title="Back to Home">
+    <a href="welcomePage.jsp" class="back-to-home-btn" title="Back to Home">
         <i class="bi bi-house-door-fill"></i>
     </a>
 
